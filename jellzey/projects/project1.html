@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  	<link href="../styles/style.css" rel="stylesheet" type="text/css">
+  	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display|Roboto" rel="stylesheet" type='text/css'>
+    <meta charset="utf-8">
+    <meta name="author" content="J. Ellzey">
+    <title>Optical Tremolo</title>
+    <link rel="shortcut icon" href="../favicon_12_10_19.png" type="image/x-icon">
+  </head> 
+
+
+  <body>
+
+    <header>
+      <a href="../../index.html">
+        <img id="header" src="../images/header.jpg" alt="J.Ellzey" title="header">
+      </a>
+    </header>
+
+    <nav id="access">
+      <ul>
+        <li><a href="../../index.html">Projects </a></li>
+        <!--<li><a href="../experiments/experiments.html">Experiments </a></li>-->
+        <li><a href="../contact.html"> Contact </a></li>
+        <li><a href="../about.html"> About </a></li>
+
+      </ul>
+    </nav>
+
+    <main>
+      <h1 class="center-text">Optical Tremolo</h1>
+
+      <div class="intro">
+        <iframe src="https://www.youtube.com/embed/ujUUqQC3YaQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="frame1">
+        </iframe>
+        <p id="intro-text">
+        The finished product! The light bulb mounted on the base of the turntable gets blocked by the fans of the record and a light sensor in the tone arm turns the volume of the guitar up and down with the light. It's got a foot pedal to toggle the effect and volume and depth controls to allow for different sounds. Shoutout to Soaring Tortoise Electronics for the inspiration.
+        </p>
+     </div>
+
+      <div class="main-content">
+          <img src="images/project1/tremolo(1).jpg" title="img1">
+          <img src="images/project1/tremolo(2).jpg" title="img2">
+          This is the first circuit I built with the photo-diode. It's just a voltage divider in series with a low gain amplifier.
+          <img src="images/project1/tremolo(4).jpg" title="img4">
+          You can see here how light shining on the photo-diode attenuates the signal on the oscilloscope.
+          <img src="images/project1/tremolo(5).jpg" title="img5">
+          I added a depth knob in between the photo-diode and ground then built a 555 timer circuit that switched this incandescent bulb on and off. At this point I had a perfectly good tremolo effect so I decided to over complicate things...
+          <img src="images/project1/tremolo(6).jpg" title="img6">
+          I started by taking apart the record player. This is all the electronics in the record player: a single diode rectifier, power supply cap, 386N amplifier IC, and some resistors to set the gain.
+          <img src="images/project1/tremolo(7).jpg" title="img7">
+          Here's the tone arm with the cartridge removed.
+          <img src="images/project1/tremolo(8).jpg" title="img8">
+          I crimped a pin connector and hot glued it in place. This way I could swap out different light sensors if I wanted too. I'm using the GL5537 here and that ended up working perfectly.
+          <img src="images/project1/tremolo(9).jpg" title="img9">
+          Here's the turntable motor/power-transformer. Everything important is mounted to this single piece of thick cardboard. Its as cheap as it gets. Those white wires coming off of the motor carry around 15V AC and I'm going to use them to power the electronics.
+          <img src="images/project1/tremolo(10).jpg" title="img10">
+          Using a single diode rectifier and a smoothing cap, I was able to get a solid 15V DC when testing with the multimeter.
+          <img src="images/project1/tremolo(11).jpg" title="img11">
+          The single diode rectifier worked but let a lot of ripple through so I swapped it out for a superior FULL BRIDGE RECTIFIER. This doubled the frequency of the pulsed DC and reduced the ripple a lot. A voltage regulator helped to completely eliminate the ripple and bring the voltage down to a more standard 12V DC.
+          <img src="images/project1/tremolo(12).jpg" title="img12">
+          Here's the friction drive mechanism for the platter. I oiled up all the joints and used rubber renew to give the drive wheel some grip. It gave this thing a lot more torque. You can see a manufacture date of what looks like September 1, 1982
+          <img src="images/project1/tremolo(13).jpg" title="img13">
+          After I was sure my breadboard circuit was perfect, I soldered everything to a proto-board. The trimmer pot on here is for the gain of the first amplifier stage
+          <img src="images/project1/tremolo(14).jpg" title="img14">
+          My first mistake: I connected the current thirsty light bulb to the same power supply as my other electronics without checking the amount of current that puny transformer could provide.
+          <img src="images/project1/tremolo(15).jpg" title="img15">
+          The result of that mistake is a dim bulb and a voltage starved circuit. It brought the voltage down to half of what it needed to be
+          <img src="images/project1/tremolo(16).jpg" title="img16">
+          I decided to take a break from the electronics and fix up the funky little case this thing came in. Pretty much all the corners looked like this.
+          <img src="images/project1/tremolo(17).jpg" title="img17">
+          Hot glue to the rescue
+          <img src="images/project1/tremolo(18).jpg" title="img18">
+          To fix my power issue, I sacrificed an old Keurig that I picked up for a buck and took its transformer. There was a lot more that I got out of this thing though. That could be a post by itself.
+          <img src="images/project1/tremolo(19).jpg" title="img19">
+          Just enough current for the bulb. I'm stoked. The plan now is to just run this transformer in parallel with the other one and use it only for the bulb.
+          <img src="images/project1/tremolo(20).jpg" title="img20">
+          Here's the transformer  mounted and wired up. It lights up the bulb plenty bright.
+          <img src="images/project1/tremolo(21).jpg" title="img21">
+          Next I had to tackle the foot switch. To reduce noise, I decided to use a relay to rout the signal rather than the switch itself. I found this tiny little signal relay at a local electronics store.
+          <img src="images/project1/tremolo(22).jpg" title="img22">
+          I soldered a piece of proto-board to a spare pot that would function as the volume knob. I mounted the relay socket on this board and wired up the input and output jacks.
+          <img src="images/project1/tremolo(23).jpg" title="img23">
+          A shot of the relay board in place
+          <img src="images/project1/tremolo(24).jpg" title="img21">
+          Jacks and pots mounted
+          <img src="images/project1/tremolo(25).jpg" title="img21">
+          Time to hook it all together for a test run
+          <img src="images/project1/tremolo(26).jpg" title="img21">
+          I added a piece of bent vinyl to hold the tone arm above the record.
+          <img src="images/project1/tremolo(27).jpg" title="img21">
+          Everything fits and it sounds good so I'm ready to tighten everything down and mount the circuit board.
+          <img src="images/project1/tremolo(28).jpg" title="img21">
+          stand-offs in place
+          <img src="images/project1/tremolo(29).jpg" title="img21">
+          Now I'm ready to solder the foot switch. I used an old aluminium project chasis and a 3PDT foot switch.
+          <img src="images/project1/tremolo(30).jpg" title="img21">
+          I mounted an LED as well to function as an indicator
+          <img src="images/project1/tremolo(31).jpg" title="img21">
+          All put together
+          <img src="images/project1/tremolo(32).jpg" title="img21">
+          With the foot switch
+          <img src="images/project1/tremolo(33).jpg" title="img21">
+          Now its time to cut the records to block the light. I did some math and found that a cut every 18 degrees would give a tremolo frequency of around 7.5 Hz at 45 rpm and 5.5 Hz at 33 rpm. I printed a protractor to mark the surface accurately and then used a heat gun to soften the vinyl so I was able to just cut it with scissors.
+          <img src="images/project1/tremolo(34).jpg" title="img21">
+          It works!!!!
+          <img src="images/project1/tremolo(35).jpg" title="img21">
+          Next I wanted to experiment with making different rhythmic patterns so I cut the record sleeve into a circle and divided it into 8 sections.
+          <img src="images/project1/tremolo(36).jpg" title="img36">
+          Then I cut out some beats out and tried it on the turntable.
+          <img src="images/project1/tremolo(37).jpg" title="img21">
+          It sounded pretty rad if you play in time with it. Kinda like playing with a drum machine. I'm definitely going to experiment with some different rhythms later on.
+          <img src="images/project1/tremolo(38).jpg" title="img21">
+          All three discs I made
+          <img src="images/project1/tremolo(39).jpg" title="img21">
+          I added some labels for the controls and that's it!
+          <img src="images/project1/tremolo(40).jpg" title="img21">
+          <img src="images/project1/tremolo(41).jpg" title="img36">
+          Bonus pic: my housemate left me his own optimized version.
+
+      </div>
+      <!--<script src="scripts/main.js"></script>-->
+    </main>
+
+  </body>
+     <footer>
+      <p>© Copyright 2019 Jacob Ellzey</p>
+    </footer>
+</html>

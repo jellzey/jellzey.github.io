@@ -1,0 +1,45 @@
+﻿<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display|Roboto" rel="stylesheet">
+
+font-family: 'Roboto', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'IBM Plex Mono', monospace;
+
+Shoobie Colors:
+ 
+Blue: #0aa4cb
+
+Yellow: #ffdc0e
+
+Red: #dd0f11
+
+Black: #282828
+
+Dates:
+
+6/22 Blue Lagoon
+6/23 309 Laurel St. (SC)
+6/24 Crepe Place
+6/25 111 washington Dr. (Salinas) 
+6/28 SLO Do. Co. (SLO)
+6/29 Pour House (Oceanside)
+6/30 Black Plague Brewing (O’side)
+7/6 Vinyl Revolution
+7/17 Blue Lagoon
+8/18 West End Celebration
+8/25 Crepe Place
+
+coffee roaster b-room: 201*
+
+photo credz:
+
+https://www.instagram.com/jakelutzmedia/
+
+http://skypaintproductions.com/
+
+/////////////////////////////////// J E L L Z E Y  S I T E /////////////////////////////////
+
+Headings:
+About, Projects(Index)
+
+orange: #e53d10
+iframe- 560x315

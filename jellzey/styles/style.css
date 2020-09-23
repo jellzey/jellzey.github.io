@@ -1,0 +1,224 @@
+@font-face {
+    font-family: 'magical_mystery_tourregular';
+    src: url('../fonts/magimt__-webfont.woff2') format('woff2'),
+         url('../fonts/magimt__-webfont.woff') format('woff');
+    font-weight: normal;
+    
+}
+
+html {
+  font-size: 17px; /* px means 'pixels': the base font size is now 10 pixels high  */
+  /*font-family: 'Courier New', 'IBM Plex Mono', monospace;*/
+  font-family: 'Roboto', sans-serif;
+  /*font-family: 'Playfair Display', serif;*/
+  background-color: #003333;
+  display: flex;
+
+}
+/*Navigation menu
+*/
+#access ul{
+  font-family: 'magical_mystery_tourregular';
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding-inline-start: 0px;
+  margin-block-start: 0px;
+}
+
+#access a{
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+#access a:hover{
+  color: #990000;
+  /*opacity: .8;*/
+}
+.nav-list{
+  padding-left: 3vw;
+  padding-right: 3vw;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav-list h2{
+  border-bottom: solid black;
+}
+
+.nav-nugget{
+  width: 30%;
+  padding: 1%;
+
+}
+.nav-nugget h3{
+  text-align: center;
+}
+#projects ul{
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  padding-inline-start: 0px;
+  margin-block-start: 0px;
+}
+
+#projects a{
+  text-decoration: none;
+  color: black;
+}
+body {
+  margin-right: auto;
+  margin-left: auto;
+  width: 60vw; 
+  min-width: 320px;
+  background-color: #cccccc;
+ 
+}
+header {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+h1 {
+  font-family: 'magical_mystery_tourregular';
+  font-size: 40px;
+  text-align: center;
+  padding: 20px 0;    
+  color: #990000;
+  /*text-shadow: 2px 2px black;*/
+}
+h2{
+  font-size: 25px;
+  margin-right: auto;
+  margin-left: auto;
+}
+form {
+  /* Center the form on the page */
+  margin: 0 auto;
+  width: 80%;/*400px;*/
+  /* Form outline */
+  padding: 1em;
+}
+label {
+  /* Uniform size & alignment */
+  display: inline-block;
+  width: 90px;
+  text-align: left;
+}
+
+input, 
+textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+
+  /* Uniform text field size */
+  width: 300px;
+  box-sizing: border-box;
+
+  /* Match form field borders */
+  border: 1px solid #999;
+}
+
+input:focus, 
+textarea:focus {
+  /* Additional highlight for focused elements */
+  border-color: #000;
+}
+
+textarea {
+  /* Align multiline text fields with their labels */
+  vertical-align: top;
+
+  /* Provide space to type some text */
+  height: 5em;
+}
+
+.button {
+  /* Align buttons with the text fields */
+  padding-left: 90px; /* same size as the label elements */
+}
+
+#contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  /* This extra margin represent roughly the same space as the space
+     between the labels and their text fields */
+  margin-left: .5em;
+}
+footer{
+  font-size: 15px;
+  text-align: center;
+  color: #003333;
+}
+
+/*///////////////////////////////////////////project pages/////////////////////////////////////*/
+
+#intro-text {
+  text-indent: 2em;
+  margin-top: 3vw;
+  margin-right: 10px;
+}
+.frame1{/*for video iframes in the intro*/
+float: left;
+width: 30vw;
+height: 17vw;
+margin: 10px;
+padding: 0;
+border: 0 none;
+box-sizing: border-box;
+}
+.frame2{ /*for the intro photos*/
+float: left;
+width: 37vw;
+margin: 10px;
+padding: 0;
+border: 0 none;
+box-sizing: border-box;
+}
+.intro{
+  margin-left: auto;
+  margin-right: auto;
+  /*background-color: green;*/
+  padding-top: 10px; 
+  margin-bottom: 15px;
+  min-height: 20vw;
+}
+.main-content{
+  width: 93%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-content img{
+  padding-top: 35px;
+  padding-bottom: 10px;
+}
+.main-content text{
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+li {
+  /*font-size: 18px;    
+  /*line-height: 2;*/
+  align-content: center;
+  /*letter-spacing: 1px;*/
+}
+
