@@ -222,3 +222,16 @@ li {
   /*letter-spacing: 1px;*/
 }
 
+#disqus_thread{
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#about-photo{
+  float: left;
+  width: 20vw;
+  margin: 10px;
+  padding: 0;
+  border: 0 none;
+  box-sizing: border-box;
+}
