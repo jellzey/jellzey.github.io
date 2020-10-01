@@ -163,6 +163,13 @@ footer{
   color: #003333;
 }
 
+#about {
+  font-size: 18px;
+  text-indent: 2em;
+  margin-top: 3vw;
+  margin-right: 10px;
+}
+
 /*///////////////////////////////////////////project pages/////////////////////////////////////*/
 
 #intro-text {
@@ -223,12 +230,15 @@ li {
 }
 
 #disqus_thread{
+  padding-top: 30px;
   padding-right: 10px;
   padding-left: 10px;
 }
 
 #about-photo{
-  float: left;
+  /*float: left;
+  */
+  align-content: center;
   width: 20vw;
   margin: 10px;
   padding: 0;
