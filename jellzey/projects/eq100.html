@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <link href="../styles/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display|Roboto" rel="stylesheet" type='text/css'>
+    <meta charset="utf-8">
+    <meta name="author" content="J. Ellzey">
+    <title>Summit Audio EQ100A</title>
+    <link rel="shortcut icon" href="../favicon_12_10_19.png" type="image/x-icon">
+  </head> 
+
+
+  <body>
+
+    <header>
+      <a href="../../index.html">
+        <img id="header" src="../images/header.jpg" alt="J.Ellzey" title="header">
+      </a>
+    </header>
+
+    <nav id="access">
+      <ul>
+        <li><a href="../../index.html">Projects </a></li>
+        <!--<li><a href="../experiments/experiments.html">Experiments </a></li>-->
+        <li><a href="../contact.html"> Contact </a></li>
+        <li><a href="../about.html"> About </a></li>
+
+      </ul>
+    </nav>
+
+    <main>
+      <h1 class="center-text">Summit Audio EQ100A</h1>
+
+      <div class="intro">
+        <img class="frame2" src="images/eq100/img22.jpg" title="vibrolux" >
+        <p id="intro-text">
+        This EQ unit came to me in peices from a local music store. A tech had previously tried to fix it but had not finished the job. It's a high-end, analog mastering eq that has tube and solid state circuitry. I found a piece of tape with "bad regulator" written on it so thats where I started my investigation. 
+        </p>
+     </div>
+
+      <div class="main-content">
+           
+          <img src="images/eq100/img0.jpg" title="img2">
+          It had already been taken apart when I recieved it and all the screws were no where to be found.  
+          <img src="images/eq100/img10.jpg" title="img4">
+          I found that all the fuses had been blown and the main fuse was missing its socket so I found a replacement for it. 
+          <img src="images/eq100/img8.jpg" title="img5">
+          The first thing I did was remove all the voltage regulators from the PCB to test them on a breadbord. I first tested for shorts with a multimeter and then applied DC with a power supply to check their function. I found that both the 24V and -24V regulators were bad, one shorted out completely.
+          <img src="images/eq100/img1.jpg" title="img6">
+          Here's the regulator board after I replaced the bad ones. At this point, I noticed that the .5A fuses had been replaced with 2A fuses. This explains why the regulators fried since they are only rated for 1.5A. I moved on to look for shorts downstream of the regulators. 
+          <img src="images/eq100/img4.jpg" title="img7">
+          The regulators supplied an array of custom op-amps made by Summit and potted in epoxy. I assume this is why the unit was shelved for so long. Despite this bummer of a discovery, I took out the one that tested like a short. It also had a loose heatsink which was another clue.  
+          <img src="images/eq100/img2.jpg" title="img8">
+          I jumped the fuses with an ammeter and turned the unit on slowly with a variac. It was working on channel 2 and drawing less than 500 mA at 117VAC so I knew I had found the main issue. 
+          <img src="images/eq100/img7.jpg" title="img9">
+          After contacting Summit about the issue, they sold me a replacement part that is the modern equivalent of the one that I removed. Instead of a heatsink, it had a metal housing. You can see from this shot that there are two transistors peaking out of the epoxy soup. Some kind of class A amplifier secret recipe. 
+          <img src="images/eq100/img9.jpg" title="img10">
+          In addition to the op amp and fuse holder, I got some new screws for the chassis cover.
+          <img src="images/eq100/img13.jpg" title="img11">
+          New op-amp in place.
+          <img src="images/eq100/img16.jpg" title="img12">
+          At this point, I wanted to test the unit but the internal fuses were 8GA size which I learned is very uncommon for the .5A rating. I couldn't even find any on mouser for a reasonable price so I improvised with some alligator clips just to test it. Both channels worked and it was drawing a normal ammount of current. 
+          <img src="images/eq100/img17.jpg" title="img13">
+          The output on the scope
+          <img src="images/eq100/img18.jpg" title="img14">
+          I heard some noise from the rotary switches so I cleaned them up with contact cleaner.  
+          <img src="images/eq100/img19.jpg" title="img15">
+          I found the correct fuses at a local electronics store. They don't usually stock this size but they have a drawer filled with old stock so I was happy to be able to find these. 
+          <img src="images/eq100/img20.jpg" title="img16">
+          New fuses in place
+          <img src="images/eq100/img24.jpg" title="img17">
+          New screws in place
+          <img src="images/eq100/img21.jpg" title="img18">
+          Back in one piece. I tested one more time with audio before returning it to the owner. 
+      </div>
+      <div id="disqus_thread"></div>
+      <script>
+
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ellzeyelectronics-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </main>
+
+  </body>
+     <footer>
+      <p>© Copyright 2019 Jacob Ellzey</p>
+    </footer>
+</html>
