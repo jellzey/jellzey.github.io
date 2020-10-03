@@ -48,6 +48,7 @@ html {
   margin-left: auto;
   margin-right: auto;
 }
+
 .nav-list h2{
   border-bottom: solid black;
 }
@@ -73,13 +74,25 @@ html {
   color: black;
 }
 body {
+  width: 95vw; /*60vw*/
   margin-right: auto;
   margin-left: auto;
-  width: 60vw; 
   min-width: 320px;
   background-color: #cccccc;
  
 }
+@media screen and (min-width: 600px) {
+    body {
+      width: 75vw;
+
+    }
+}
+@media screen and (min-width: 800px) {
+    body {
+      width: 60vw;
+    }
+}
+
 header {
   margin-left: auto;
   margin-right: auto;
@@ -101,7 +114,8 @@ h2{
 }
 form {
   /* Center the form on the page */
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   width: 80%;/*400px;*/
   /* Form outline */
   padding: 1em;
