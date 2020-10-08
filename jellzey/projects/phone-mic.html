@@ -35,32 +35,32 @@
         <iframe src="https://www.youtube.com/embed/mNIv55mZ5zQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="frame1">
         </iframe>
         <p id="intro-text">
-        Here's a shot of the finished product. Its a lo-fi microphone, vocal effect and monitor all in one. It has a PT2399 delay circuit with adjustable time and feedback, a switchable bandpass filter to give an authentic telephone sound, and a monitor with adjustable volume in the handset so you can hear yourself. I had the idea after playing a lot of house shows with my band where we couldn't hear ourselves and the vocals always sounded dry and boring. Not anymore! And it looks pretty cool too.
+        Here's a demo video of the finished product. It's a lo-fi microphone, vocal effect, and monitor all in one. It has a PT2399 delay circuit with adjustable time and feedback, a switchable bandpass filter to give an authentic telephone sound, and a monitor with adjustable volume in the handset so you can hear yourself. I had the idea after playing a lot of house shows with my band where we couldn't hear ourselves and the vocals always sounded dry and boring. Not anymore! And it looks pretty cool too. I made this one for a musician who wanted the limited bandwidth sound of an old telephone so this is the first time I included a switchable bandpass filter in the design and I'm very happy with how it turned out.
         </p>
      </div>
 
       <div class="main-content">
           <img src="images/phone-mic/img38.jpg" title="img0">
           <img src="images/phone-mic/img0.jpg" title="img1">
-          This is the first bandpass filter I put together on the breadboard. It's a 6 pole Chebyshev which ended up getting scrapped for reasons I'll get into. Next to it is the Western Electric model 500 chassis that needs to be gutted.
+          This is the first bandpass filter I put together on the breadboard. It's a 6 pole Chebyshev which ended up getting scrapped. Next to it is the Western Electric model 500 chassis that needs to be gutted.
           <img src="images/phone-mic/img1.jpg" title="img1">
-          When connecting an electret mic to the filter, I heard a resonance that made this lo-fi project sound sub-lo-fi. Ringing is to be expected with this type of filter though and is traded off for the super sharp cutoff that the Chebyshev has. I just didn't expect it to be that noticeable.  A Butterworth filter is almost always a better choice for audio so that's what I built next.
+          When connecting an electret mic to the filter, I heard a resonance that was very un-musical. Ringing is to be expected with this type of filter though and is traded off for the super sharp cutoff that the Chebyshev has. I didn't expect it to be that noticeable though. A Butterworth filter is a better choice for audio so that's what I built next.
           <img src="images/phone-mic/img12.jpg" title="img12">
           Here's a shot of the 4-pole Butterworth bandpass. It has a center frequency of 1.85kHz and a bandwidth of 3kHz. I tested it again with the mic and a signal generator and didn't hear or see any resonance so I moved on to the delay module.
           <img src="images/phone-mic/img23.jpg" title="img23">
           I'm using this super convenient PT2399 board from Amazon. It's powered from the 9V supply and connected to the output of the filter. The pot connected to the board is for feedback level. The delay time is set with a fixed resistor.
           <img src="images/phone-mic/img9.jpg" title="img9">
-          To make delay time adjustable, R27 must be removed and a 20k pot needs to be added.
+          To make delay time adjustable, R27 must be removed and a 20 k&Omega; pot needs to be added.
           <img src="images/phone-mic/img41.jpg" title="img36">
-          After testing the output from the delay module, I began working on the handset monitor. I used another convenient Amazon PCB this time to drive the speaker. Its an LM386 module with adjustable gain. I tried an output transformer between the speaker and the LM386 but the high impedance speaker didn't need it and it made no difference in output volume. I also added another amplifier with a gain of 5 after the delay at this stage.
+          After testing the output from the delay module, I began working on the handset monitor. I used another convenient Amazon PCB this time to drive the speaker. Its an LM386 module with adjustable gain. I tried an output transformer between the speaker and the LM386 but the high impedance speaker didn't need it and it made no difference in output volume.
           <img src="images/phone-mic/img43.jpg" title="img21">
-          This is the electret board that I made to go in the handset. I tried using the carbon mic that the handset came with at first. I made a transresistive amplifier to connect the mic to but it just didn't sound very good and it was kinda noisy. I bet it would sound great with a harmonica though.
+          This is the electret board that I made to go in the handset. It is possible to use the carbon capsule that comes in the handset but it's a little noisy, distorts more, and requires a trans-resistive amplifier. For this mic, I wanted to have a less distorted sound so I went with an electret.
           <img src="images/phone-mic/img44.jpg" title="img21">
-          mounted in the capsule
+          mounted in the handset.
           <img src="images/phone-mic/img4.jpg" title="img4">
           At this point, I added the volume control for the monitor, removed the diode clamp from the speaker, and rewired the handset for +5V, ground, monitor signal, and mic signal.
           <img src="images/phone-mic/img42.jpg" title="img21">
-          Here's the diode clamp from the handset. It's to ensure that the phone doesn't get too loud and hurt your ears I think. I want as much volume as I can get from this though so I removed it. I'm gonna try using it to clip an amplified signal as a super cheap distortion effect.
+          Here's the diode clamp from the handset. I think it's there to ensure that the phone doesn't get too loud and hurt your ears. I want as much volume as I can get from this though so I removed it. It can be used it to clip an amplified signal as a cheap distortion effect or limiter so I'm throwing it in the parts bin for later.
           <img src="images/phone-mic/img6.jpg" title="img6">
           I wired the handset up for a final test and then started soldering the board.
           <img src="images/phone-mic/img34.jpg" title="img21">
@@ -70,20 +70,20 @@
           <img src="images/phone-mic/img10.jpg" title="img21">
           second stage added and tested
           <img src="images/phone-mic/img11.jpg" title="img11">
-          crimped a connector to make it easier to remove from the final assembly when it inevitably doesn't work
+          I crimped a connector to make it easier to remove from the final assembly when it doesn't work.
           <img src="images/phone-mic/img14.jpg" title="img14">
-          Starting to mount parts in the case. got a switch for the filter, a DC barrel jack, some LED's, and a board for the time control pot.
+          Starting to mount parts in the case. I installed a switch for the filter, a DC barrel jack, some LED's, and a board for the time control pot.
           <img src="images/phone-mic/img15.jpg" title="img15">
           Drilled a couple holes and used epoxy to mount the standoffs
           <img src="images/phone-mic/img18.jpg" title="img18">
-          using a 1/4" TRS jack to act as a power switch so the battery doesn't drain unless its plugged in
+          Using a 1/4" TRS jack to act as a power switch so the battery doesn't drain unless its plugged in
           <img src="images/phone-mic/img19.jpg" title="img19">
           battery clip glued in place
           <img src="images/phone-mic/img21.jpg" title="img21">
-          soldered a socket to another tiny proto-board to act as a mount for the LM386 module
+          I soldered a socket to another tiny proto-board to act as a mount for the LM386 module.
           
           <img src="images/phone-mic/img25.jpg" title="img21">
-          final testing of the rats nest. Of course it didn't work on the first try.
+          Final testing of the rats nest. Of course it didn't work on the first try.
           <img src="images/phone-mic/img26.jpg" title="img21">
           Using the breadboard as a guide, I traced the problem to a wrong connection on the filter board.
           <img src="images/phone-mic/img27.jpg" title="img21">

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <link href="../styles/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display|Roboto" rel="stylesheet" type='text/css'>
+    <meta charset="utf-8">
+    <meta name="author" content="J. Ellzey">
+    <title>Fender Pro Reverb</title>
+    <link rel="shortcut icon" href="../favicon_12_10_19.png" type="image/x-icon">
+  </head> 
+
+
+  <body>
+
+    <header>
+      <a href="../../index.html">
+        <img id="header" src="../images/header.jpg" alt="J.Ellzey" title="header">
+      </a>
+    </header>
+
+    <nav id="access">
+      <ul>
+        <li><a href="../../index.html">Projects </a></li>
+        <!--<li><a href="../experiments/experiments.html">Experiments </a></li>-->
+        <li><a href="../contact.html"> Contact </a></li>
+        <li><a href="../about.html"> About </a></li>
+
+      </ul>
+    </nav>
+
+    <main>
+      <h1 class="center-text">Fender Pro Reverb</h1>
+
+      <div class="intro">
+        <img class="frame2" src="images/pro-reverb/img0.jpg" title="Pro Reverb" >
+        <p id="intro-text">
+        This amplifier came to me with a loud hum and a very distorted output. After the repair, I talked to the owner and we decided to add an option to remove the negative feedback loop using the ground switch that was no longer needed. I was very happy with how the amp turned out and would recommend this mod to anyone with an unused ground switch.
+        </p>
+     </div>
+
+      <div class="main-content">
+           
+          <img src="images/pro-reverb/img3.jpg" title="img2">
+          Before removing the chassis, I noticed that the amp had a knob on the back which I initially thought would be a mid range knob added to the tone stack. It turned out to be something else.  
+          <img src="images/pro-reverb/img6.jpg" title="img4">
+          The amp had lots of visible repair and modification history. It looks like the amp was at one point converted to solid state rectification and then converted back. The terminal strip and diodes were left in place -an easy job if anyone ever wanted to switch back. 
+          <img src="images/pro-reverb/img7.jpg" title="img5">
+          The plate and grid resistors in the power amp were replaced with modern components. I also noticed that the chassis had 2 more socket holes punched out. Maybe it had been converted to a quad tube power section at some point like a twin reverb. 
+          <img src="images/pro-reverb/img8.jpg" title="img6">
+          I always check the phase inverter resistors if I have the chassis out of the cabinet and this time I found a 100 k&Omega; that was out of spec. I replaced it with a modern metal film resistor. 
+          <img src="images/pro-reverb/img9.jpg" title="img7">
+          Here is where the knob on the back of the amp leads. A 5.6 k&Omega; resistor is connected in series to a 10 k&Omega; pot to vary the resistance to ground in the bass filter section. I imagine the idea is to change the cutoff frequency but I had a hard time hearing an effect on the tone.   
+          <img src="images/pro-reverb/img11.jpg" title="img8">
+          I noticed that the amp had low B+ voltage so I went straight to the power supply. I found that the first of the series caps had a leg disconnected internally. Super wierd. It fell right out when I removed it. I replaced it with a 100 &mu;F at 350 V and the amp sounded great.    
+          <img src="images/pro-reverb/img12.jpg" title="img9">
+          The idea of this mod is to take the 820 &Omega; resistor that provides negative feedback to the amp, and allow it to be disconnected through the available ground switch. The feedback softens the highs and attenuates the overall volume of the amp. Removing it gives more bite to the tone and allows for more breakup at lower volumes. The feedback comes through a wire connected to the external speaker which is a perfect place to break the loop with the switch.
+          <img src="images/pro-reverb/img13.jpg" title="img10">
+          Since the amp was already converted to a 3 prong cord, the ground switch is doing nothing in the circuit. 
+          <img src="images/pro-reverb/img15.jpg" title="img11">
+          I spliced the AC line connected to the switch to free it up. 
+          <img src="images/pro-reverb/img16.jpg" title="img12">
+          Here the loop wire is extended to reach the switch. I matched the original wire with some modern cloth covered wire.
+          <img src="images/pro-reverb/img18.jpg" title="img13">
+          Connections to the switch
+          <img src="images/pro-reverb/img23.jpg" title="img14">
+          The last thing to do was bias the amp. I used a plate current probe and got the tubes around 14 Watts. 
+          <img src="images/pro-reverb/img27.jpg" title="img15">
+          Cleaning pots and switches before re-assembly
+          <img src="images/pro-reverb/img31.jpg" title="img16">
+          Testing it out. I really love the tone of an amp without the feedback loop. You can get a much more aggressive sound. Plus, the mod is quick and minimally invasive because the parts are already in the amp (minus some wire).  
+      </div>
+      <div id="disqus_thread"></div>
+      <script>
+
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ellzeyelectronics-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </main>
+
+  </body>
+     <footer>
+      <p>© Copyright 2020 Jacob Ellzey</p>
+    </footer>
+</html>

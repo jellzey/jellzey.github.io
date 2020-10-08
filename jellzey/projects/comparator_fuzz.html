@@ -46,11 +46,11 @@
           <img src="images/comparator_fuzz/IMG_8175.JPG" title="img3">
           I connected the signal generator to the input and varied the reference voltage while watching the output signal on the scope. 
           <img src="images/comparator_fuzz/IMG_8176.JPG" title="img4">
-          The circuit did what it was supposed to except I noticed some crossover distortion at the output. This makes sense since I was using an LM324 instead of a dedicated comparator. This can be fixed with a resistor from the output to the negative supply. 
+          The circuit did what it was supposed to except I noticed some crossover distortion at the output. This is common for LM324's and can be fixed with a resistor from the output to the negative supply. 
           <img src="images/comparator_fuzz/IMG_8177.JPG" title="img5">
-          The resistor fixed the crossover distorion and I wanted to try it with a guitar to see how it sounds. I added an amplifier stage before the comparator to boost the guitar signal.
+          I wanted to try it with a guitar to see how it sounds so I added an amplifier stage before the comparator to boost the guitar signal.
           <img src="images/comparator_fuzz/Comparator-Fuzz.png" title="img6">
-          The circuit actually sounds pretty good with a guitar. It's close to a square wave but some of the upper harmonics come through. It would probably help to put an LPF before the amplifier stage if you're after a pure square wave. The one problem that I had with it though is how little sustain it had. The signal cuts out completely after it gets below a certain level which gives it a gated fuzz sound. 
+          The circuit actually sounds pretty cool with a guitar. It's close to a square wave but some of the upper harmonics come through. It would probably help to put an LPF before the amplifier stage if you're after a pure square wave. Since it's a comparator, the signal cuts out completely after it gets below a certain level which gives it a gated fuzz sound. 
       </div>
       <div id="disqus_thread"></div>
       <script>

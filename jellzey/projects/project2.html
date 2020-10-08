@@ -34,27 +34,27 @@
       <div class="intro">
         <img class="frame2" src="images/project2/IMG_8193.JPG" title="Nikko1" >
         <p id="intro-text">
-        I picked up this reciever at a flea market for only $1 with the goal of making it function for as cheap as possible. It was missing all the chasis screws when I bought it so I was sure somebody had opened it up and messed with it in the past - usually a bad sign. Other than that though, it looked to be in pretty good shape so I went ahead and started poking around.
+        I picked up this reciever at a flea market for only $1 with the goal of making it function for as cheap as possible. It was missing all the chasis screws when I bought it so I was sure somebody had opened it up and messed with it in the past. Other than that though, it looked to be in pretty good shape so I went ahead and started poking around.
         </p>
      </div>
 
       <div class="main-content">
           <img src="images/project2/IMG_8178.JPG" title="img1">
-            After checking the line chord for shorts, I felt ok with plugging it into the wall and turning it on. The first thing I noticed was that all but one of the display bulbs had burned out.
+          The first thing I noticed was that all but one of the display bulbs had burned out.
           <img src="images/project2/IMG_8179.JPG" title="img2">
           The display used these fuse lamps that run off of 8V AC directly from a transformer tap. They each draw 300mA and they're wired in parallel through a 2A fuse.
           <img src="images/project2/IMG_8186.JPG" title="img4">
           Since buying new incandescent lamps would be pricey, I decided to wire two LED's in parallel with their polarities reversed and connect them in series with a current limiting resistor to the 8V AC. I chose a 220 ohm resistor which at 4 volts gives just under 20mA. I soldered them directly to the bulbs and popped them back in the sockets. I also replaced the 2A fuse with a 1A because the LED's don't draw nearly as much current. 
           <img src="images/project2/IMG_8180.JPG" title="img5">
-          To test the amplifier circuit, I connected two 8 Ohm dummy loads to the output and sent a 1kHz sine wave through the aux input. The left channel tested fine, outputting around 11 Watts. When I moved the pan knob to the right side, however, one of the high wattage resistors began smoking so I cut the power and checked out the right channel amplifier.
+          To test the amplifier circuit, I connected two 8 Ohm dummy loads to the output and sent a 1kHz sine wave through the aux input. The left channel tested fine, pushing around 11 Watts. When I moved the pan knob to the right side, however, one of the high wattage resistors began smoking so I cut the power and checked out the right channel amplifier.
           <img src="images/project2/IMG_8187.JPG" title="img6">
           Here is a shot of the insides of the amp. I had to remove the newly replaced display lights to get to the power amplifier circuit underneath. Each channel uses two BJT's that are screwed in to the aluminum heatsink. With a visual inspection, I didn't notice anything that looked charred. I also tested the resistor that got hot and it was within spec. 
           <img src="images/project2/IMG_8195.JPG" title="img7">
-          After poking around with a multimeter for a short to ground, I tried testing the power transistors with a component tester. Both transistors failed super bad. One of them looked like a short from emitter to base and the other blew open. I ordered some NTE-152's to replace them. I also noticed while I was searching for a short that someone had replaced the 2A audio output fuse with a 4A on one channel and a 3A on the other. That explains why the transistors were fried.
+          I tried testing the right channel power transistors with a component tester. One of them looked like a short from emitter to base and the other blew open. I ordered some NTE-152's to replace them. I also noticed while I was searching for a short that someone had replaced the 2A audio output fuse with a 4A on one channel and a 3A on the other. That explains why the transistors were fried.
           <img src="images/project2/IMG_8181.JPG" title="img8">
           After screwing the new NTE-152's into the heatsink with some heat transfer paste and insulation, I soldered them both into the right channel and replaced the fuses with the correct values. Using the same test as before, I got good readings for both channels. Here's a shot of the scope with the pan knob turned just off center. Both channels are putting out 11 Watts now. 
           <img src="images/project2/IMG_8192.JPG" title="img9">
-          The last step was de-oxing all of the switches and pots to rid the controls of their scratchy-stickiness. Testing with speakers, the amp sounded good on both channels so I decided to call it on this one.
+          The last step was cleaning all of the switches and pots to get rid of that scratching sound that old controls have. Testing with speakers, the amp sounded good on both channels so I decided to call it on this one.
       </div>
       <div id="disqus_thread"></div>
       <script>

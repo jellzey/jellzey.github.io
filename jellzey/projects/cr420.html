@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <link href="../styles/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display|Roboto" rel="stylesheet" type='text/css'>
+    <meta charset="utf-8">
+    <meta name="author" content="J. Ellzey">
+    <title>Yamaha CR-420</title>
+    <link rel="shortcut icon" href="../favicon_12_10_19.png" type="image/x-icon">
+  </head> 
+
+
+  <body>
+
+    <header>
+      <a href="../../index.html">
+        <img id="header" src="../images/header.jpg" alt="J.Ellzey" title="header">
+      </a>
+    </header>
+
+    <nav id="access">
+      <ul>
+        <li><a href="../../index.html">Projects </a></li>
+        <!--<li><a href="../experiments/experiments.html">Experiments </a></li>-->
+        <li><a href="../contact.html"> Contact </a></li>
+        <li><a href="../about.html"> About </a></li>
+
+      </ul>
+    </nav>
+
+    <main>
+      <h1 class="center-text">Yamaha CR-420</h1>
+
+      <div class="intro">
+        <img class="frame2" src="images/cr420/img1.jpg" title="cr420" >
+        <p id="intro-text">
+        The owner of this receiver told me that the left channel was not working. At first I thought it would be some burned out transistors but I didn't find any evidence of that so I decided to hook it up to a dummy load and signal generator to look at the output.
+        </p>
+     </div>
+
+      <div class="main-content">
+           
+          <img src="images/cr420/img2.jpg" title="img2">
+          With the output loaded, I saw no problems on the scope until I switched the input to the phono channel. The left side disapeared. Notice on this circuit board how the potentiometers are mechanically coupled to the controls through universal joints.
+          <img src="images/cr420/img3.jpg" title="img4">
+          I started to trace the phono preamp to see where the signal disapeared.
+          <img src="images/cr420/img8.jpg" title="img5">
+          As I was probing the board, I noticed a very thin crack on one of the traces. The crack was right next to a solder joint for the PCB mounted potentiometer. Mounting pots like this is a bad idea for stereo controls. They transfer the torque from the knob directly to the brittle PCB causing stress and cracks.
+          <img src="images/cr420/img11.jpg" title="img6">
+          To repair the crack, I removed the enamel coating from the traces along the length of the crack.
+          <img src="images/cr420/img14.jpg" title="img7">
+          Then I added flux to the exposed copper and filled in the crack with solder. 
+          <img src="images/cr420/img13.jpg" title="img8">
+          I found another one next to another potentiometer and fixed it the same way.
+          <img src="images/cr420/img15.jpg" title="img9">
+          Traces repaired
+          <img src="images/cr420/img18.jpg" title="img10">
+          The left channel was back now and the amp was working as it should. A quick fix this time. 
+      </div>
+      <div id="disqus_thread"></div>
+      <script>
+
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ellzeyelectronics-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </main>
+
+  </body>
+     <footer>
+      <p>© Copyright 2020 Jacob Ellzey</p>
+    </footer>
+</html>

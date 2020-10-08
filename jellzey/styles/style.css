@@ -74,14 +74,15 @@ html {
   color: black;
 }
 body {
-  width: 95vw; /*60vw*/
+  width: 60vw;
   margin-right: auto;
   margin-left: auto;
   min-width: 320px;
   background-color: #cccccc;
  
 }
-@media screen and (min-width: 600px) {
+/*and this is where I would put dynamic design IF I HAD ONE*/
+/*@media screen and (min-width: 600px) {
     body {
       width: 75vw;
 
@@ -91,7 +92,7 @@ body {
     body {
       width: 60vw;
     }
-}
+}*/
 
 header {
   margin-left: auto;

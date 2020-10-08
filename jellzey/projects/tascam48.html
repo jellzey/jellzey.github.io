@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <link href="../styles/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display|Roboto" rel="stylesheet" type='text/css'>
+    <meta charset="utf-8">
+    <meta name="author" content="J. Ellzey">
+    <title>Tascam 48</title>
+    <link rel="shortcut icon" href="../favicon_12_10_19.png" type="image/x-icon">
+  </head> 
+
+
+  <body>
+
+    <header>
+      <a href="../../index.html">
+        <img id="header" src="../images/header.jpg" alt="J.Ellzey" title="header">
+      </a>
+    </header>
+
+    <nav id="access">
+      <ul>
+        <li><a href="../../index.html">Projects </a></li>
+        <!--<li><a href="../experiments/experiments.html">Experiments </a></li>-->
+        <li><a href="../contact.html"> Contact </a></li>
+        <li><a href="../about.html"> About </a></li>
+
+      </ul>
+    </nav>
+
+    <main>
+      <h1 class="center-text">Tascam 48</h1>
+
+      <div class="intro">
+        <img class="frame2" src="images/tascam48/img41.jpg" title="Tascam 48" >
+        <p id="intro-text">
+        The owner of this machine had problems getting it to record on several channels. I threaded some tape to test it out but when the machine was playing, I noticed that the tape, the tension arm, and the takeup reel had developed a layer of sticky tar on them. The pinch roller and tape counter roller had started to melt and had were falling apart as the tape passed over them. I cut the tape off the reel and removed what was left of the rollers to send off for resurfacing.
+        </p>
+     </div>
+
+      <div class="main-content">
+           
+          <img src="images/tascam48/img2.jpg" title="img2">
+          I sent the rollers off to <a href="http:\\terrysrubberrollers.com"> Terry Witt </a> for resurfacing and started cleaning the tar out of the transport mechanism.
+          <img src="images/tascam48/img4.jpg" title="img4">
+          Some time later, the rollers came back looking brand new.
+          <img src="images/tascam48/img10.jpg" title="img5">
+          The machine recorded on half of the channels when I tested it so I decided to switch the amplifier cards to see where the problem was. 
+          <img src="images/tascam48/img8.jpg" title="img6">
+          Switching the cards around fixed all but one of the dead channels so I cleaned the contacts on the card slots. Channel 5 still showed no meter deflection and had no output so I removed the channel card for a closer look.
+          <img src="images/tascam48/img11.jpg" title="img7">
+          The first thing I noticed was the discoloration around this 100&Omega; resistor. It's a dropping resistor for the -15V supply and it looked like it was getting hot. The solder also looked very thin and not consistant with the other joints.   
+          <img src="images/tascam48/img12.jpg" title="img8">
+          The insulation on the leads looked like it had been replaced or had been discolored from the heat that it was experiencing.
+          <img src="images/tascam48/img13.jpg" title="img9">
+          The resistor tested fine so I returned it to the board with some fresh solder
+          <img src="images/tascam48/img17.jpg" title="img10">
+          I added some new insulation on the leads. Next, I looked at what components this resistor supplied and began testing for shorts.  
+          <img src="images/tascam48/img31.jpg" title="img12">
+          I removed two amplifier IC's to test them but they tested fine. I installed sockets in the board to make removal and testing easier in the future
+          <img src="images/tascam48/img35.jpg" title="img13">
+          Next, I looked at the filter caps on the -15V line. The short I was looking for was found in a 220&mu;F filter cap.
+          <img src="images/tascam48/img37.jpg" title="img14">
+          I replaced it with a cap of the same value and a higher voltage rating.
+          <img src="images/tascam48/img40.jpg" title="img15">
+          The cap in place
+          <img src="images/tascam48/img41.jpg" title="img16">
+          Final testing. All channels are in business.
+      </div>
+      <div id="disqus_thread"></div>
+      <script>
+
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ellzeyelectronics-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </main>
+
+  </body>
+     <footer>
+      <p>© Copyright 2020 Jacob Ellzey</p>
+    </footer>
+</html>
