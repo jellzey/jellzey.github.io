@@ -34,22 +34,22 @@
       <div class="intro">
         <img class="frame2" src="images/pax/img0.jpg" title="Pax Vaporizer" >
         <p id="intro-text">
-        The owner of this Pax told me that it had been broken for several years since the day it just stopped heating up. I removed the cover and began some explorative surgery. The cover is held on with one screw and slides off to reveal the plastic structure that holds all the parts together. I found a 3 layered circuit board inside which makes tracing very difficult. This thing was definitly more complex than I expected. It has a microcontroller in charge of everything and several sensors to minimize buttons. I found an accelerometer to detect a shake and what I think is a reed switch to detect the position of the mouthpiece. 
+        The owner of this Pax told me that it had been broken for several years since the day it just stopped heating up. I removed the cover and began some explorative surgery. The cover is held on with one screw and slides off to reveal the plastic structure that holds all the parts together. I found a 3 layered circuit board inside which makes tracing very difficult. This thing was definitely more complex than I expected. It has a microcontroller in charge of everything and several sensors to minimize buttons. I found an accelerometer to detect a shake and what I think is a reed switch to detect the position of the mouthpiece. 
         </p>
      </div>
 
       <div class="main-content">
            
           <img src="images/pax/img2.jpg" title="img2">
-          Heres the backside, just battery leads.
+          Here's the backside, just battery leads.
           <img src="images/pax/img5.jpg" title="img4">
           I desoldered the heater and charging contacts from the board and removed it to inspect the heater.
           <img src="images/pax/img8.jpg" title="img5">
-          Removing the insulation reveals the oven. The oven is heated by the serpentine traces laminated in some kind of heat resistant plastic tape. The temperature sensor is a surface mounted thermistor that is grounded on one side with the other side connecting to the board. It most likely forms a voltage divider with another resistor on the board to supply a temperature-dependent voltage that the microcontroller can sample. The thermistor tested good with a multimeter.
+          Removing the insulation reveals the oven. The oven is heated by the serpentine traces laminated in heat resistant plastic tape. The temperature sensor is a surface mounted thermistor that is grounded on one side with the other side connecting to the board. It most likely forms a voltage divider with another resistor on the board to supply a temperature-dependent voltage that the microcontroller can sample. The thermistor tested good with a multimeter.
           <img src="images/pax/img11.jpg" title="img6">
           Here's the locking mechanism that is used to change the position of the mouthpiece.
           <img src="images/pax/img6.jpg" title="img7">
-          After verifying that the heater was working by testing it with a voltage from my power supply, I traced the heater wires to the transistor on the circuit board that drives them. I could barely make out a mark on the tiny SMD chip so I looked at it again with a microscope. 
+          After verifying that the heater was working by testing it with a voltage from my power supply, I traced the heater wires to a transistor on the circuit board that drives them. I could barely make out a mark on the tiny SMD chip so I looked at it again with a microscope. 
           <img src="images/pax/microscope/img1.jpg" title="img8">
           At this point I was pretty sure that I had found the issue. You can tell this chip is burned out from that mark on it. Also that solder bead looked pretty suspicious. This chip was definitely getting hot. 
           <img src="images/pax/microscope/img2.jpg" title="img9">
@@ -67,7 +67,7 @@
           <img src="images/pax/img18.jpg" title="img16">
           All put back together. It heats up!
           <img src="images/pax/img21.jpg" title="img16">
-          It charges! I was very happy to be able to fix this one. First looking at the board, I was unsure if it would be repairable.
+          It charges! I was unsure if it would be repairable when I first opened it so I was very happy to be able to fix this one. 
       </div>
       <div id="disqus_thread"></div>
       <script>
