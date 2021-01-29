@@ -7,7 +7,7 @@
 }
 
 html {
-  font-size: 20px; /* px means 'pixels': the base font size is now 10 pixels high  */
+  font-size: 17px; 
   /*font-family: 'Courier New', 'IBM Plex Mono', monospace;*/
   font-family: 'Roboto', sans-serif;
   /*font-family: 'Playfair Display', serif;*/
@@ -15,10 +15,10 @@ html {
   display: flex;
 
 }
-/*and this is where I would put dynamic design IF I HAD ONE*/
-@media screen and (min-width: 600px) {
+
+@media screen and (max-width: 600px) {
   html{
-    font-size: 17px;
+    font-size: 20px;
   }
 }
 
