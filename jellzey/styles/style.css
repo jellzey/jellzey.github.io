@@ -32,7 +32,7 @@ html {
 #access a{
   text-decoration: none;
   color: black;
-  font-size: 25px;
+  font-size: x-large;
   font-weight: bold;
   padding: 0 20px;
   text-transform: uppercase;
@@ -60,6 +60,13 @@ html {
 }
 .nav-nugget h3{
   text-align: center;
+  font-size: large;
+}
+.title{
+  text-align: center;
+}
+.desc{
+  vertical-align: text-top;
 }
 #projects ul{
   display: flex;
@@ -74,10 +81,10 @@ html {
   color: black;
 }
 body {
-  width: 60vw;
+  max-width: 900px;
+  min-width: 691px;
   margin-right: auto;
   margin-left: auto;
-  min-width: 320px;
   background-color: #cccccc;
  
 }
@@ -102,14 +109,14 @@ header {
 
 h1 {
   font-family: 'magical_mystery_tourregular';
-  font-size: 40px;
+  font-size: xxx-large;
   text-align: center;
   padding: 20px 0;    
   color: #990000;
   /*text-shadow: 2px 2px black;*/
 }
 h2{
-  font-size: 25px;
+  font-size: x-large;
   margin-right: auto;
   margin-left: auto;
 }
@@ -173,13 +180,13 @@ button {
   margin-left: .5em;
 }
 footer{
-  font-size: 15px;
+  font-size: small;
   text-align: center;
   color: #003333;
 }
 
 #about {
-  font-size: 18px;
+  font-size: medium;
   text-indent: 2em;
   margin-top: 3vw;
   margin-right: 10px;
@@ -191,6 +198,7 @@ footer{
   text-indent: 2em;
   margin-top: 3vw;
   margin-right: 10px;
+  margin-left: 15px;
 }
 .frame1{/*for video iframes in the intro*/
 float: left;
