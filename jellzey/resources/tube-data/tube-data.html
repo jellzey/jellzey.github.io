@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  	<link href="../styles/minimal.css" rel="stylesheet" type="text/css">
+  	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display|Roboto" rel="stylesheet" type='text/css'>
+    <meta charset="utf-8">
+    <meta name="author" content="J. Ellzey">
+    <title>Tube Table</title>
+    <link rel="shortcut icon" href="../../favicon_12_10_19.png" type="image/x-icon">
+  </head> 
+  <body>
+
+    <header>
+      <a href="../../../index.html">Ellzey Electronics Website</a>
+    </header>
+<p></p>
+    <nav id="access">
+      <a href="../resources.html"><- Resources</a>
+    </nav>
+
+    <main>
+
+      <h1>Audio Tube Data</h1>
+
+      <p></p>
+
+        <h2>Preamp Tubes</h2>
+      <table>
+        <tr>
+          <th scope="col" rowspan="2">Name(s)</th>
+          <th scope="col" rowspan="2"> Notes</th>
+          <th scope="col" rowspan="2">Type</th>
+          <th scope="col" colspan="3"> Constants</th>
+          <th scope="col" colspan="2"> Max Values</th>
+          <th scope="col" colspan="2">Layout</th>
+        </tr>
+        <tr>
+          <th scope="col">  &mu;</th>
+          <th scope="col"> r<sub>p</sub> (&Omega;)</th>
+          <th scope="col"> g<sub>m</sub> (&mu;&#8487;)</th>
+          <th scope="col"> P<sub>A,MAX</sub> (W)</th>
+          <th scope="col"> V<sub>A,MAX</sub> (V)</th>
+          <th scope="col">Base</th>
+          <th scope="col">EIA Terminal Diagram</th>
+
+        </tr>
+
+        <tr>
+          <th scope="row">12AX7, ECC83, 7025</th>
+          <td>1947, RCA </td>
+          <td >High mu twin triode</td>
+          <td>100</td>
+          <td>63k-80k</td>
+          <td>1250-1600</td>
+          <td>1.2</td>
+          <td>330</td>
+          <td rowspan="8">Noval</td>
+          <td rowspan="7"> <img src="images/EIC_9A.svg" class="pinout"> </td>
+        </tr>
+
+        <tr>
+          <th scope="row">12AY7, 6072</th>
+          <td> first stage of high gain amp </td>
+          <td rowspan="9">Medium mu twin triode</td>
+          <td>40</td>
+          <td>22.8k</td>
+          <td>1750</td>
+          <td>1.5</td>
+          <td>300</td>
+        </tr>
+
+        <tr>
+          <th scope="row">12AT7, ECC81, 6201</th>
+          <td> better for high frequency </td>
+          <td>60</td>
+          <td>11k-15k</td>
+          <td>4-5.5k</td>
+          <td>2.5</td>
+          <td>300</td>
+        </tr>
+
+        <tr>
+          <th scope="row">12AU7, ECC81, 6201</th>
+          <td> low noise, hifi, phase inverter, tone stack </td>
+          <td>17-19.5</td>
+          <td>6.3k-7.7k</td>
+          <td>3.1-2.2k</td>
+          <td>2.75</td>
+          <td>300</td>
+        </tr>
+
+        <tr>
+          <th scope="row">12BH7, ECC99</th>
+          <td> &nbsp;</td>
+          <td>16.5</td>
+          <td>5.3k</td>
+          <td>3.1k</td>
+          <td>3.5</td>
+          <td>300</td>
+        </tr>
+
+        <tr>
+          <th scope="row">5751</th>
+          <td> swap with 12AX7 for less overdrive. good phase inverter. Low max dissipation. </td>
+          <td>70</td>
+          <td>58k</td>
+          <td>1.2k</td>
+          <td>0.8</td>
+          <td>330</td>
+        </tr>
+
+        <tr>
+          <th scope="row">E88CC, 6922</th>
+          <td>high transconductance, long life</td>
+          <td>33</td>
+          <td>2.9k-2.6k</td>
+          <td>11.5k-12.5k</td>
+          <td>1.5</td>
+          <td>250</td>
+        </tr>
+
+        <tr>
+          <th scope="row">6FQ7, 6CG7</th>
+          <td>high wattage, 1954</td>
+          <td>20</td>
+          <td>6.7-7.7k</td>
+          <td>2.6-3k</td>
+          <td>4</td>
+          <td>330</td>
+          <td > <img src="images/EIC_9LP.svg" class="pinout"> </td>
+        </tr>
+
+        <tr>
+          <th scope="row">6SN7</th>
+          <td>high wattage, 1939, mostly used in hifi</td>
+          <td>20</td>
+          <td>6.7-7.7k</td>
+          <td>2.6-3k</td>
+          <td>5</td>
+          <td>450</td>
+          <td rowspan="2">Octal</td>
+          <td rowspan="2"> <img src="images/EIC_8BD.svg" class="pinout"> </td>
+        </tr>
+
+        <tr>
+          <th scope="row">6SL7</th>
+          <td>used as phase inverter</td>
+          <td>70</td>
+          <td>44k</td>
+          <td>1.6k</td>
+          <td>1</td>
+          <td>300</td>
+        </tr>
+
+        <tr>
+          <th scope="row">EF86, 6267</th>
+          <td>1954, low noise</td>
+          <td>Small signal pentode</td>
+          <td>185</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>1</td>
+          <td>300</td>
+          <td>Noval</td>
+          <td > <img src="images/EIC_EF86.svg" class="pinout"> </td>
+        </tr>
+
+      </table>
+      <p></p>
+
+      <h2 class="table2">Power Tubes</h2>
+      <table>
+        <tr>
+          <th scope="col" rowspan="2">Name(s)</th>
+          <th scope="col" rowspan="2"> Notes</th>
+          <th scope="col" rowspan="2">Type</th>
+          <th scope="col" colspan="3"> Max Values</th>
+          <th scope="col" colspan="3">Layout</th>
+        </tr>
+        <tr>
+          <th scope="col"> P<sub>A,MAX</sub> (W)</th>
+          <th scope="col"> 70% P<sub>A,MAX</sub> (W)</th>
+          <th scope="col"> V<sub>A,MAX</sub> (V)</th>
+          <th scope="col">Base</th>
+          <th scope="col">EIA Terminal Diagram</th>
+
+        </tr>
+
+        <tr>
+          <th scope="row">6L6GC, 5881 </th>
+          
+          <td>Metal can 6L6 invented by RCA 1936</td>
+          <td rowspan="3">Beam Tetrode</td>
+          <td>30</td>
+          <td>21</td>
+          <td>500</td>
+          <td rowspan="7">Octal</td>
+          <td rowspan="3"> <img src="images/EIC_7AC.svg" class="pinout2"> </td>
+        </tr>
+
+        <tr>
+          <th>6V6GT</th>
+          <td>Metal can 6V6 invented by Ken-Rad 1936 as low power 6L6 for radio use.</td>
+          <td>14</td>
+          <td>9.8</td>
+          <td>350</td>
+        </tr>
+
+        <tr>
+          <th>KT66</th>
+          <td>invented by Marconi-Osram (GEC) in 1937. More robust than original 6L6</td>
+          <td rowspan="3">25</td>
+          <td rowspan="3">17.5</td>
+          <td>500</td>
+        </tr>
+
+        <tr>
+          <th scope="row">EL34</th>
+          <td>Invented by Mullard in 1949</td>
+          <td>Power Pentode</td>
+          <td rowspan="2">800</td>
+          <td rowspan="2"> <img src="images/EIC_8ET.svg" class="pinout2"> </td>
+        </tr>
+
+        <tr>
+          <th scope="row">6CA7, KT77</th>
+          <td>Sylvania and GEC created their own versions of the popular EL34 in 1949</td>
+          <td rowspan="3">Beam Tetrode</td>
+        </tr>
+
+        <tr>
+          <th scope="row">6550</th>
+          <td>Invented by Tung-Sol in 1954. High Power, low distortion</td>
+          <td>35</td>
+          <td>24.5</td>
+          <td>600</td>
+          <td rowspan="2"> <img src="images/EIC_7S.svg" class="pinout2"> </td>
+        </tr>
+
+        <tr>
+          <th scope="row">KT88</th>
+          <td>Invented by GEC in 1956. High Power, low distortion</td>
+          <td>42</td>
+          <td>29.4</td>
+          <td>800</td>
+        </tr>
+
+        <tr>
+          <th scope="row">EL84, 6BQ5</th>
+          <td>Invented by Mullard in 1953. High gain to eliminate driver tube</td>
+          <td rowspan="3">Power Pentode</td>
+          <td rowspan="2">12</td>
+          <td rowspan="2">8.4</td>
+          <td>300</td>
+          <td rowspan="2">Noval</td>
+          <td rowspan="2"> <img src="images/EIC_9CV.svg" class="pinout2"> </td>
+        </tr>
+
+        <tr>
+          <th>7189</th>
+          <td>Extended ratings EL84</td>
+          <td>400</td>
+        </tr>
+        <tr>
+          <th scope="row">7591</th>
+          <td>&nbsp;</td>
+          <td>19</td>
+          <td>13.3</td>
+          <td>550</td>
+          <td rowspan="2"> Octal</td>
+          <td > <img src="images/EIC_8KQ.svg" class="pinout2"> </td>
+        </tr>
+
+        <tr>
+          <th scope="row">7027</th>
+          <td>&nbsp;</td>
+          <td>Beam Tetrode</td>
+          <td>25</td>
+          <td>17.5</td>
+          <td>450</td>
+          <td > <img src="images/EIC_8HY.svg" class="pinout2"> </td>
+
+        </tr>
+      </table>
+    </main>
+
+    <footer>
+      <p>© Copyright 2021 Jacob Ellzey</p>
+    </footer>
+
+  </body>
+</html>
