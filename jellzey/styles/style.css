@@ -7,7 +7,7 @@
 }
 
 html {
-  font-size: 17px; /* px means 'pixels': the base font size is now 10 pixels high  */
+  font-size: 20px; /* px means 'pixels': the base font size is now 10 pixels high  */
   /*font-family: 'Courier New', 'IBM Plex Mono', monospace;*/
   font-family: 'Roboto', sans-serif;
   /*font-family: 'Playfair Display', serif;*/
@@ -15,6 +15,17 @@ html {
   display: flex;
 
 }
+/*and this is where I would put dynamic design IF I HAD ONE*/
+@media screen and (min-width: 600px) {
+  html{
+    font-size: 17px;
+  }
+}
+
+/*}
+@media screen and (min-width: 800px) {
+
+}*/
 /*Navigation menu
 */
 #access ul{
@@ -32,7 +43,7 @@ html {
 #access a{
   text-decoration: none;
   color: black;
-  font-size: x-large;
+  font-size: 150%;
   font-weight: bold;
   padding: 0 20px;
   text-transform: uppercase;
@@ -60,7 +71,8 @@ html {
 }
 .nav-nugget h3{
   text-align: center;
-  font-size: large;
+  font-size:110%;
+  font-weight: bold;
 }
 .title{
   text-align: center;
@@ -88,18 +100,7 @@ body {
   background-color: #cccccc;
  
 }
-/*and this is where I would put dynamic design IF I HAD ONE*/
-/*@media screen and (min-width: 600px) {
-    body {
-      width: 75vw;
 
-    }
-}
-@media screen and (min-width: 800px) {
-    body {
-      width: 60vw;
-    }
-}*/
 
 header {
   margin-left: auto;
@@ -109,14 +110,14 @@ header {
 
 h1 {
   font-family: 'magical_mystery_tourregular';
-  font-size: xxx-large;
+  font-size: 250%;
   text-align: center;
   padding: 20px 0;    
   color: #990000;
   /*text-shadow: 2px 2px black;*/
 }
 h2{
-  font-size: x-large;
+  font-size: 130%;
   margin-right: auto;
   margin-left: auto;
 }
