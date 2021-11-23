@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <!--
-  	<link href="../jellzey/styles/style.css" rel="stylesheet" type="text/css">
-  	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display|Roboto" rel="stylesheet" type='text/css'>
+    <link href=".\jellzey\Queue\minimal.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display|Roboto" rel="stylesheet" type='text/css'>
     <meta charset="utf-8">
     <meta name="author" content="J. Ellzey">
-    <title>About</title>
-     -->
-    <link rel="shortcut icon" href="jellzey/favicon_12_10_19.png" type="image/x-icon">
-
+    <title>Repair Queue</title>
+    <link rel="shortcut icon" href="../../favicon_12_10_19.png" type="image/x-icon">
   </head> 
-  <body>
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+<body>
+<h1>Repair Queue</h1>
+<div w3-include-html=".\jellzey\Queue\queueTable.html"></div> 
 
-    <header>
-    <!--
-    <img src="../jellzey/images/header.jpg" alt="Jacob Ellzey" title ="J. Ellzey">
-    -->
-    </header>
+<script>
+includeHTML();
+</script>
 
-   <!--  <nav id="access">
-      <ul>
-        <li><a href="../index.html">Projects</a></li>
-        <li><a href="contact.html"> Contact </a></li>
-        <li><a href="about.html"> About </a></li>
-      </ul>
-    </nav> -->
-
-    <main>
-
-      <h1>Repair Queue</h1>
-        <p>
-          UNDER CONSTRUCTION
-        </p>
-
-    </main>
-
-    <footer>
-      <!--<p>© Copyright 2022 Jacob Ellzey</p>-->
-    </footer>
-
-  </body>
+</body>
 </html>
