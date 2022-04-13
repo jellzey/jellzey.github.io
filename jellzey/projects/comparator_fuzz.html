@@ -1,61 +1,73 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-  	<link href="../styles/style.css" rel="stylesheet" type="text/css">
-  	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display|Roboto" rel="stylesheet" type='text/css'>
-    <meta charset="utf-8">
-    <meta name="author" content="J. Ellzey">
-    <title>Comparator Fuzz</title>
-    <link rel="shortcut icon" href="../favicon_12_10_19.png" type="image/x-icon">
-  </head> 
-
-
-  <body>
-
-    <header>
-      <a href="../../index.html">
-        <img id="header" src="../images/header.jpg" alt="J.Ellzey" title="header">
-      </a>
-    </header>
-
-    <nav id="access">
-      <ul>
-        <li><a href="../../index.html">Projects</a></li>
-        <!--<li><a href="../experiments/experiments.html">Experiments </a></li>-->
-        <li><a href="../contact.html">Contact</a></li>
-        <li><a href="../about.html">About</a></li>
-
-      </ul>
-    </nav>
-
-    <main>
-      <h1 class="center-text"> Comparator Fuzz </h1>
-
-      <div class="intro">
-        <img class="frame2" src="images/comparator_fuzz/IMG_8174.JPG" title="compFuzz" >
-        <p id="intro-text">
-        I started this experiment with the goal of creating a square wave out of a guitar signal using a comparator. The idea was to send the signal through a comparator using signal ground as the reference voltage. I drew the expected result in my notebook and then realized that I could also vary the duty cycle of the square wave by varying the reference voltage with a potentiometer. 
-        </p>
-     </div>
-
-      <div class="main-content">
-          <img src="images/comparator_fuzz/IMG_8172.JPG" title="img1">
-          I started with a split rail buffer to make it possible to use a single ended power supply.
-          <img src="images/comparator_fuzz/IMG_8173.JPG" title="img2">
-          The next step was adding the volume knob and reference voltage pot.
-          <img src="images/comparator_fuzz/IMG_8175.JPG" title="img3">
-          I connected the signal generator to the input and varied the reference voltage while watching the output signal on the scope. 
-          <img src="images/comparator_fuzz/IMG_8176.JPG" title="img4">
-          The circuit did what it was supposed to except I noticed some crossover distortion at the output. This is common for LM324's and can be fixed with a resistor from the output to the negative supply. 
-          <img src="images/comparator_fuzz/IMG_8177.JPG" title="img5">
-          I wanted to try it with a guitar to see how it sounds so I added an amplifier stage before the comparator to boost the guitar signal.
-          <img src="images/comparator_fuzz/Comparator-Fuzz.png" title="img6">
-          The circuit actually sounds pretty cool with a guitar. It's close to a square wave but some of the upper harmonics come through. It would probably help to put an LPF before the amplifier stage if you're after a pure square wave. Since it's a comparator, the signal cuts out completely after it gets below a certain level which gives it a gated fuzz sound. 
-      </div>
-      <div id="disqus_thread"></div>
-      <script>
-
-      /**
+ <head>
+  <link href="..\styles\style.css" id="local" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display|Roboto" rel="stylesheet" type="text/css"/>
+  <meta charset="utf-8"/>
+  <meta content="J. Ellzey" name="author"/>
+  <title>
+   Comparator Fuzz
+  </title>
+  <link href="..\favicon_12_10_19.png" id="local" rel="shortcut icon" type="image/x-icon"/>
+ </head>
+ <body>
+  <header>
+   <a href="..\..\index.html" id="local">
+    <img alt="Ellzey Electronics" id="local" src="..\header.jpg"/>
+   </a>
+  </header>
+  <nav id="access">
+   <ul>
+    <li>
+     <a href="https://ellzeyelectronics.myshopify.com/">
+      Store
+     </a>
+    </li>
+    <li>
+     <a href="..\contact.html" id="local">
+      Contact
+     </a>
+    </li>
+    <li>
+     <a href="..\resources\resources.html" id="local">
+      Resources
+     </a>
+    </li>
+    <li>
+     <a href="..\about.html" id="local">
+      About
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <main>
+   <h1 class="center-text">
+    Comparator Fuzz
+   </h1>
+   <div class="intro">
+    <img class="frame2" src="images/comparator_fuzz/IMG_8174.JPG" title="compFuzz"/>
+    <p id="intro-text">
+     I started this experiment with the goal of creating a square wave out of a guitar signal using a comparator. The idea was to send the signal through a comparator using signal ground as the reference voltage. I drew the expected result in my notebook and then realized that I could also vary the duty cycle of the square wave by varying the reference voltage with a potentiometer.
+    </p>
+   </div>
+   <div class="main-content">
+    <img src="images/comparator_fuzz/IMG_8172.JPG" title="img1"/>
+    I started with a split rail buffer to make it possible to use a single ended power supply.
+    <img src="images/comparator_fuzz/IMG_8173.JPG" title="img2"/>
+    The next step was adding the volume knob and reference voltage pot.
+    <img src="images/comparator_fuzz/IMG_8175.JPG" title="img3"/>
+    I connected the signal generator to the input and varied the reference voltage while watching the output signal on the scope.
+    <img src="images/comparator_fuzz/IMG_8176.JPG" title="img4"/>
+    The circuit did what it was supposed to except I noticed some crossover distortion at the output. This is common for LM324's and can be fixed with a resistor from the output to the negative supply.
+    <img src="images/comparator_fuzz/IMG_8177.JPG" title="img5"/>
+    I wanted to try it with a guitar to see how it sounds so I added an amplifier stage before the comparator to boost the guitar signal.
+    <img src="images/comparator_fuzz/Comparator-Fuzz.png" title="img6"/>
+    The circuit actually sounds pretty cool with a guitar. It's close to a square wave but some of the upper harmonics come through. It would probably help to put an LPF before the amplifier stage if you're after a pure square wave. Since it's a comparator, the signal cuts out completely after it gets below a certain level which gives it a gated fuzz sound.
+   </div>
+   <div id="disqus_thread">
+   </div>
+   <script>
+    /**
       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
       /*
@@ -70,12 +82,43 @@
       s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);
       })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </main>
-
-  </body>
-     <footer>
-      <p>© Copyright 2020 Jacob Ellzey</p>
-    </footer>
+   </script>
+   <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">
+     comments powered by Disqus.
+    </a>
+   </noscript>
+  </main>
+  <div id="disqus_thread">
+  </div>
+  <script>
+   /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ellzeyelectronics-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>
+   Please enable JavaScript to view the
+   <a href="https://disqus.com/?ref_noscript">
+    comments powered by Disqus.
+   </a>
+  </noscript>
+ </body>
+ <footer>
+  <p>
+   &copy; Copyright 2022 Jacob Ellzey
+  </p>
+ </footer>
 </html>

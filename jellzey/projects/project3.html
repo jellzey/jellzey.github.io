@@ -1,75 +1,88 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-  	<link href="../styles/style.css" rel="stylesheet" type="text/css">
-  	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display|Roboto" rel="stylesheet" type='text/css'>
-    <meta charset="utf-8">
-    <meta name="author" content="J. Ellzey">
-    <title>Lafayette Stereo-10</title>
-    <link rel="shortcut icon" href="../favicon_12_10_19.png" type="image/x-icon">
-  </head> 
-
-
-  <body>
-
-    <header>
-      <a href="../../index.html">
-        <img id="header" src="../images/header.jpg" alt="J.Ellzey" title="header">
-      </a>
-    </header>
-
-    <nav id="access">
-      <ul>
-        <li><a href="../../index.html">Projects </a></li>
-        <!--<li><a href="../experiments/experiments.html">Experiments </a></li>-->
-        <li><a href="../contact.html"> Contact </a></li>
-        <li><a href="../about.html"> About </a></li>
-      </ul>
-    </nav>
-
-    <main>
-      <h1 class="center-text"> Lafayette Stereo-10 </h1>
-
-      <div class="intro">
-        <img class="frame2" src="images/project3/IMG_8214.JPG" title="Layfayette1" >
-        <p id="intro-text">
-        I got this old stereo amplifier from a flea market and only paid a buck for it. It's a low wattage amp and uses two seperate pots for the stereo channels which is super weird. I wanted to give this thing to a friend so my goal in working on it was to make sure it would be reliable. 
-        </p>
-     </div>
-
-      <div class="main-content">
-          <img src="images/project3/IMG_8215.JPG" title="img1">
-          The inspection date on the bottom says this thing was made in the 60's. I'm expecting some germainium transistors.
-          <img src="images/project3/IMG_8196.JPG" title="img2">
-          This amp is very servicable. I will definitley be changing out the filter caps in the power supply. 
-          <img src="images/project3/IMG_8197.JPG" title="img4">
-          You can see the germainuim transistors that are bolted to the chasis for heat dissapation. Before doing anything, I took the values down for all the electrolytic caps in the amp and ordered replacements for the ones that I didn't have on hand. I want this amp to be reliable and there aren't that many electrolytics so I figured I'd just replace them all. 
-          <img src="images/project3/IMG_8200.JPG" title="img5">
-          Here's a shot of the replacement caps soldered into the power supply section. The alligator clips are going to dummy load resistors for each channel so I can test the amp with a signal generator.
-          <img src="images/project3/IMG_8199.JPG" title="img6">
-          This is my setup for testing the amp. I was looking at both channels on an oscilloscope using a 1kHz tone. Both channels looked good through the aux and phono inputs and could be driven pretty hard before showing distortion. 
-          <img src="images/project3/IMG_8201.JPG" title="img7">
-          Since I already had replacements for them, I went ahead and replaced all of the electrolytic caps in the amplifier circuit. Heres a shot of the phono preamp before. 
-          <img src="images/project3/IMG_8203.JPG" title="img8">
-          And here's the preamp after replacement. I used some Nichicon audio caps. 
-          <img src="images/project3/IMG_8207.JPG" title="img9">
-          While resoldering a cap on the main amplifier board, I noticed a resistor that was soldered on the underside of the PCB that had split in half.
-          <img src="images/project3/IMG_8209.JPG" title="img10">
-          I used two 1/4 Watt resistors in parallel to be safe because I don't know what kind of current this resistor needs to carry but I doubt it would be over 1/2 a Watt.
-          <img src="images/project3/IMG_8210.JPG" title="img11">
-          Here's a shot of the board after re-capping. 
-          <img src="images/project3/IMG_8211.JPG" title="img12">
-          The board is a little more crowded now because I used capacitors with a higher voltage rating.
-          <img src="images/project3/IMG_8216.JPG" title="img13">
-          All the old caps
-          <img src="images/project3/IMG_8213.JPG" title="img12">
-          The last step was using contact cleaner on all of the pots and switches and then putting it all back together. 
-      </div>
-      <!--<script src="scripts/main.js"></script>-->
-      <div id="disqus_thread"></div>
-      <script>
-
-      /**
+ <head>
+  <link href="..\styles\style.css" id="local" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display|Roboto" rel="stylesheet" type="text/css"/>
+  <meta charset="utf-8"/>
+  <meta content="J. Ellzey" name="author"/>
+  <title>
+   Lafayette Stereo-10
+  </title>
+  <link href="..\favicon_12_10_19.png" id="local" rel="shortcut icon" type="image/x-icon"/>
+ </head>
+ <body>
+  <header>
+   <a href="..\..\index.html" id="local">
+    <img alt="Ellzey Electronics" id="local" src="..\header.jpg"/>
+   </a>
+  </header>
+  <nav id="access">
+   <ul>
+    <li>
+     <a href="https://ellzeyelectronics.myshopify.com/">
+      Store
+     </a>
+    </li>
+    <li>
+     <a href="..\contact.html" id="local">
+      Contact
+     </a>
+    </li>
+    <li>
+     <a href="..\resources\resources.html" id="local">
+      Resources
+     </a>
+    </li>
+    <li>
+     <a href="..\about.html" id="local">
+      About
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <main>
+   <h1 class="center-text">
+    Lafayette Stereo-10
+   </h1>
+   <div class="intro">
+    <img class="frame2" src="images/project3/IMG_8214.JPG" title="Layfayette1"/>
+    <p id="intro-text">
+     I got this old stereo amplifier from a flea market and only paid a buck for it. It's a low wattage amp and uses two seperate pots for the stereo channels which is super weird. I wanted to give this thing to a friend so my goal in working on it was to make sure it would be reliable.
+    </p>
+   </div>
+   <div class="main-content">
+    <img src="images/project3/IMG_8215.JPG" title="img1"/>
+    The inspection date on the bottom says this thing was made in the 60's. I'm expecting some germainium transistors.
+    <img src="images/project3/IMG_8196.JPG" title="img2"/>
+    This amp is very servicable. I will definitley be changing out the filter caps in the power supply.
+    <img src="images/project3/IMG_8197.JPG" title="img4"/>
+    You can see the germainuim transistors that are bolted to the chasis for heat dissapation. Before doing anything, I took the values down for all the electrolytic caps in the amp and ordered replacements for the ones that I didn't have on hand. I want this amp to be reliable and there aren't that many electrolytics so I figured I'd just replace them all.
+    <img src="images/project3/IMG_8200.JPG" title="img5"/>
+    Here's a shot of the replacement caps soldered into the power supply section. The alligator clips are going to dummy load resistors for each channel so I can test the amp with a signal generator.
+    <img src="images/project3/IMG_8199.JPG" title="img6"/>
+    This is my setup for testing the amp. I was looking at both channels on an oscilloscope using a 1kHz tone. Both channels looked good through the aux and phono inputs and could be driven pretty hard before showing distortion.
+    <img src="images/project3/IMG_8201.JPG" title="img7"/>
+    Since I already had replacements for them, I went ahead and replaced all of the electrolytic caps in the amplifier circuit. Heres a shot of the phono preamp before.
+    <img src="images/project3/IMG_8203.JPG" title="img8"/>
+    And here's the preamp after replacement. I used some Nichicon audio caps.
+    <img src="images/project3/IMG_8207.JPG" title="img9"/>
+    While resoldering a cap on the main amplifier board, I noticed a resistor that was soldered on the underside of the PCB that had split in half.
+    <img src="images/project3/IMG_8209.JPG" title="img10"/>
+    I used two 1/4 Watt resistors in parallel to be safe because I don't know what kind of current this resistor needs to carry but I doubt it would be over 1/2 a Watt.
+    <img src="images/project3/IMG_8210.JPG" title="img11"/>
+    Here's a shot of the board after re-capping.
+    <img src="images/project3/IMG_8211.JPG" title="img12"/>
+    The board is a little more crowded now because I used capacitors with a higher voltage rating.
+    <img src="images/project3/IMG_8216.JPG" title="img13"/>
+    All the old caps
+    <img src="images/project3/IMG_8213.JPG" title="img12"/>
+    The last step was using contact cleaner on all of the pots and switches and then putting it all back together.
+   </div>
+   <!--<script src="scripts/main.js"></script>-->
+   <div id="disqus_thread">
+   </div>
+   <script>
+    /**
       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
       /*
@@ -84,12 +97,43 @@
       s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);
       })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </main>
-
-  </body>
-     <footer>
-      <p>© Copyright 2020 Jacob Ellzey</p>
-    </footer>
+   </script>
+   <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">
+     comments powered by Disqus.
+    </a>
+   </noscript>
+  </main>
+  <div id="disqus_thread">
+  </div>
+  <script>
+   /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ellzeyelectronics-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>
+   Please enable JavaScript to view the
+   <a href="https://disqus.com/?ref_noscript">
+    comments powered by Disqus.
+   </a>
+  </noscript>
+ </body>
+ <footer>
+  <p>
+   &copy; Copyright 2022 Jacob Ellzey
+  </p>
+ </footer>
 </html>

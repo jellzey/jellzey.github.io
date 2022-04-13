@@ -1,70 +1,81 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <link href="../styles/style.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display|Roboto" rel="stylesheet" type='text/css'>
-    <meta charset="utf-8">
-    <meta name="author" content="J. Ellzey">
-    <title>Fender Rumble 25</title>
-    <link rel="shortcut icon" href="../favicon_12_10_19.png" type="image/x-icon">
-  </head> 
-
-
-  <body>
-
-    <header>
-      <a href="../../index.html">
-        <img id="header" src="../images/header.jpg" alt="J.Ellzey" title="header">
-      </a>
-    </header>
-
-    <nav id="access">
-      <ul>
-        <li><a href="../../index.html">Projects </a></li>
-        <!--<li><a href="../experiments/experiments.html">Experiments </a></li>-->
-        <li><a href="../contact.html"> Contact </a></li>
-        <li><a href="../about.html"> About </a></li>
-
-      </ul>
-    </nav>
-
-    <main>
-      <h1 class="center-text">Fender Rumble 25</h1>
-
-      <div class="intro">
-        <img class="frame2" src="images/rumble25/img10.jpg" title="vibrolux" >
-        <p id="intro-text">
-        This nice low-wattage bass amp was totally comatose when I recieved it. The pilot light didn't even turn on so I knew something was wrong with the power supply. There is no fuse to be found on this model which made me think something might have fried inside. I went ahead and removed the chassis. 
-        </p>
-     </div>
-
-      <div class="main-content">
-           
-          <img src="images/rumble25/img0.jpg" title="img2">
-          First I checked the power supply board for any burnt looking components but everything looked normal. 
-          <img src="images/rumble25/img2.jpg" title="img4">
-          Another shot of the board
-          <img src="images/rumble25/img3.jpg" title="img5">
-          Not finding anything visually, I removed the board to trace the power supply. Here is a shot of where the wall voltage connects to the board. The hot side passes through an inductor before reaching the primary of the power transformer.
-          <img src="images/rumble25/img4.jpg" title="img6">
-          With the power on, I carefully probed the board starting at the AC input and when I reached the inductor with the probe, the amp turned on and the probe got stuck to the solder on the pad. That joint had gone cold and the multimeter lead caused an arc that fused the probe with the solder. I unplugged the amp and cleaned the remaining solder from the pad to check out its condition. 
-          <img src="images/rumble25/img5.jpg" title="img7">
-          It looked good so I added some flux and fresh solder to the joint. 
-          <img src="images/rumble25/img6.jpg" title="img8">
-          Here's a shot of the inductor that caused the problem.
-          <img src="images/rumble25/img8.jpg" title="img9">
-          The amp was powering on again so I plugged in a speaker to check it out. 
-          <img src="images/rumble25/img13.jpg" title="img10">
-          The amp sounded great with a bass until I pressed the overdrive switch. The sound cut out completely so I removed the amplifier board for a cleaning. 
-          <img src="images/rumble25/img12.jpg" title="img11">
-          I cleaned all the switches and pots with contact cleaner and re-flowed the solder on the switches since they handle a lot of mechanical stress. 
-          <img src="images/rumble25/img9.jpg" title="img12">
-          The switch problem was now gone and the amp sounded excellent so I reassembled and called it a day. I was surprised how loud this little amp could get. 
-      </div>
-      <div id="disqus_thread"></div>
-      <script>
-
-      /**
+ <head>
+  <link href="..\styles\style.css" id="local" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display|Roboto" rel="stylesheet" type="text/css"/>
+  <meta charset="utf-8"/>
+  <meta content="J. Ellzey" name="author"/>
+  <title>
+   Fender Rumble 25
+  </title>
+  <link href="..\favicon_12_10_19.png" id="local" rel="shortcut icon" type="image/x-icon"/>
+ </head>
+ <body>
+  <header>
+   <a href="..\..\index.html" id="local">
+    <img alt="Ellzey Electronics" id="local" src="..\header.jpg"/>
+   </a>
+  </header>
+  <nav id="access">
+   <ul>
+    <li>
+     <a href="https://ellzeyelectronics.myshopify.com/">
+      Store
+     </a>
+    </li>
+    <li>
+     <a href="..\contact.html" id="local">
+      Contact
+     </a>
+    </li>
+    <li>
+     <a href="..\resources\resources.html" id="local">
+      Resources
+     </a>
+    </li>
+    <li>
+     <a href="..\about.html" id="local">
+      About
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <main>
+   <h1 class="center-text">
+    Fender Rumble 25
+   </h1>
+   <div class="intro">
+    <img class="frame2" src="images/rumble25/img10.jpg" title="vibrolux"/>
+    <p id="intro-text">
+     This nice low-wattage bass amp was totally comatose when I recieved it. The pilot light didn't even turn on so I knew something was wrong with the power supply. There is no fuse to be found on this model which made me think something might have fried inside. I went ahead and removed the chassis.
+    </p>
+   </div>
+   <div class="main-content">
+    <img src="images/rumble25/img0.jpg" title="img2"/>
+    First I checked the power supply board for any burnt looking components but everything looked normal.
+    <img src="images/rumble25/img2.jpg" title="img4"/>
+    Another shot of the board
+    <img src="images/rumble25/img3.jpg" title="img5"/>
+    Not finding anything visually, I removed the board to trace the power supply. Here is a shot of where the wall voltage connects to the board. The hot side passes through an inductor before reaching the primary of the power transformer.
+    <img src="images/rumble25/img4.jpg" title="img6"/>
+    With the power on, I carefully probed the board starting at the AC input and when I reached the inductor with the probe, the amp turned on and the probe got stuck to the solder on the pad. That joint had gone cold and the multimeter lead caused an arc that fused the probe with the solder. I unplugged the amp and cleaned the remaining solder from the pad to check out its condition.
+    <img src="images/rumble25/img5.jpg" title="img7"/>
+    It looked good so I added some flux and fresh solder to the joint.
+    <img src="images/rumble25/img6.jpg" title="img8"/>
+    Here's a shot of the inductor that caused the problem.
+    <img src="images/rumble25/img8.jpg" title="img9"/>
+    The amp was powering on again so I plugged in a speaker to check it out.
+    <img src="images/rumble25/img13.jpg" title="img10"/>
+    The amp sounded great with a bass until I pressed the overdrive switch. The sound cut out completely so I removed the amplifier board for a cleaning.
+    <img src="images/rumble25/img12.jpg" title="img11"/>
+    I cleaned all the switches and pots with contact cleaner and re-flowed the solder on the switches since they handle a lot of mechanical stress.
+    <img src="images/rumble25/img9.jpg" title="img12"/>
+    The switch problem was now gone and the amp sounded excellent so I reassembled and called it a day. I was surprised how loud this little amp could get.
+   </div>
+   <div id="disqus_thread">
+   </div>
+   <script>
+    /**
       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
       /*
@@ -79,12 +90,43 @@
       s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);
       })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </main>
-
-  </body>
-     <footer>
-      <p>© Copyright 2020 Jacob Ellzey</p>
-    </footer>
+   </script>
+   <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">
+     comments powered by Disqus.
+    </a>
+   </noscript>
+  </main>
+  <div id="disqus_thread">
+  </div>
+  <script>
+   /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ellzeyelectronics-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>
+   Please enable JavaScript to view the
+   <a href="https://disqus.com/?ref_noscript">
+    comments powered by Disqus.
+   </a>
+  </noscript>
+ </body>
+ <footer>
+  <p>
+   &copy; Copyright 2022 Jacob Ellzey
+  </p>
+ </footer>
 </html>

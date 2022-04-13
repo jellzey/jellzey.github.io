@@ -1,89 +1,101 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <link href="../styles/style.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display|Roboto" rel="stylesheet" type='text/css'>
-    <meta charset="utf-8">
-    <meta name="author" content="J. Ellzey">
-    <title>Bluetooth Radio</title>
-    <link rel="shortcut icon" href="../favicon_12_10_19.png" type="image/x-icon">
-  </head> 
-
-
-  <body>
-
-    <header>
-      <a href="../../index.html">
-        <img id="header" src="../images/header.jpg" alt="J.Ellzey" title="header">
-      </a>
-    </header>
-
-    <nav id="access">
-      <ul>
-        <li><a href="../../index.html">Projects </a></li>
-        <!--<li><a href="../experiments/experiments.html">Experiments </a></li>-->
-        <li><a href="../contact.html"> Contact </a></li>
-        <li><a href="../about.html"> About </a></li>
-
-      </ul>
-    </nav>
-
-    <main>
-      <h1 class="center-text">Bluetooth Radio</h1>
-
-      <div class="intro">
-        <img class="frame2" src="images/BT-radio/img20.jpg" title="Bluetooth Radio" >
-        <p id="intro-text">
-        This Admiral 5A4 from 1956 gives you the time, date, day of the week, wakes you up with music, and offers a generous snooze cycle (tube warm-up time extends this even more). But because AM radio isn't what it used to be, I decided to add bluetooth to stream music from. Wishing to still preserve its originality, my goal was to make the bluetooth unit fit inside the radio without altering it physically or changing the circuit around. I wanted to be able to toggle the audio between both sources and I wanted to power it from 120V AC coming from the radio's on/off switch. I have a stash of bluetooth reciever modules that take a 5V supply and output a stereo audio signal so the main thing I had to figure out was how to power these boards and how to toggle the input.
-     </div>
-
-      <div class="main-content">
-
-          <img src="images/BT-radio/img13.jpg" title="img4">
-          Luckily, this radio came equipped with a switched phono jack that leads directly to the volume control. Plugging into this jack disconnects the audio amplifier from the reciever section of the radio and switches in whatever signal is sent through the jack. This means I don't even need to add a switch, I can just send a small length of cable out the back of the radio from the bluetooth module inside. 
-          <img src="images/BT-radio/hot-chassis.JPG" title="hot chassis">
-          It's worth noting that this radio is a transformerless "hot chassis" design, meaning that the AC from the wall is connected to the ground of the circuit. This design, in combination with the un-polarized plug, means any metal inside could be connected to the live wire. The radio was designed to be well insulated in order to keep users from getting shocked but once inside, extra care should be taken to avoid any mishaps. I was using an isolation transformer and thick rubber gloves.
-          <img src="images/BT-radio/img22.png" title="img2">
-          This is the circuit I ended up with. It's a capacitive dropper that can put out around 80 mA. The AC is dropped by the impedance of C1, rectified, and sent to a linear regulator. Then, to avoid noise from ground loops, a DC-DC converter provides the bluetooth board with an isolated 5V. R1 is there to tame spikes. D5 ensures that the regulator only sees 10V max. C3, C4, C5, and L1 are chosen based on the datasheets of the active components. Lastly, the output from the bluetooth is summed to mono and sent to the phono input of the radio through R2 and R3.
-           <p>
-            My initial research of capacitive droppers led me to believe that C1 must be a safety capacitor but I don't think that would actually make the circuit safer in this case. Since an X rated capacitor would likely fail short, the low voltage side could get the full brunt of the wall voltage and destroy itself before the fuse even blows. </p>
-          <p>
-            (Please know that this circuit is inherently dangerous. Like the radio, the power supply has no isolation so if you do attempt this circuit, do so at your own risk and please do your research before attempting to work with mains voltage.)
-          </p>
-          <img src="images/BT-radio/mrcoffee.jpg" title="img2">
-          A better option for C1 is a regular poly-film capacitor with a high voltage rating (at least 3 times wall voltage). This is a picture of the insides of a Mr. Coffee machine that uses a very similar circuit to power the low voltage electronics. It uses a 1.5 uF cap that is rated at 400V and I'll be using five .47 uF 630V capacitors in parallel because that's what I had in my droor. 
-          <img src="images/BT-radio/img1.jpg" title="img4">
-          I first built the circuit on a breadboard to verify that it worked. I used a dummy load resistor to simulate the current draw and then replaced it with the actual bluetooth board. 
-          <img src="images/BT-radio/img2.jpg" title="img5">
-          To provide the power, I soldered grey lamp cord to the switch and AC input and sent it through a hole in the chassis that just happened to be there already. That big bumblebee cap in the background was later removed. It was soldered across the line which is a bad place for an antique paper foil cap. All the other capacitors in the radio were upgraded to poly film types and the electrolytics were replaced.
-          <img src="images/BT-radio/img4.jpg" title="img6">
-          I wanted to make sure the radio was in good shape before putting everything back together so I started working on the plastic case with some epoxy. Here I used the resin to fill in where the plastic broke off.
-          <img src="images/BT-radio/img5.jpg" title="img7">
-          There was also a huge crack that needed to be fixed before anything could be put back in the case.
-          <img src="images/BT-radio/img9.jpg" title="img9">
-          The speaker was ripped in a couple places. This can be fixed with a little PVA glue and tissue paper.
-          <img src="images/BT-radio/img10.jpg" title="img9">
-          After the repair. This method provides a sturdy and flexible bond and works better than any other method I've tried for paper cones. 
-          <img src="images/BT-radio/img7.jpg" title="img10">
-          Here is the prototype board all put together. I didn't have any fuse holders so I had to improvise.
-          <img src="images/BT-radio/img6.jpg" title="img12">
-          I soldered the bluetooth leads directly into the board and used terminal screws for the other connections. 
-          <img src="images/BT-radio/img8.jpg" title="img13">
-          Testing the board with power from the radio
-          <img src="images/BT-radio/img11.jpg" title="img14">
-          To mount it inside, I made a bracket out of steel wire to hook onto an existing mounting screw on the clock assembly.
-          <img src="images/BT-radio/img12.jpg" title="img15">
-          This way it would take up minimal space and be the furthest from the heat-generating tubes.
-          <img src="images/BT-radio/img14.jpg" title="img16">
-          New plug soldered on. The right angle plug turned out to be too shallow to reach the jack so I went with the straight style.
-          <img src="images/BT-radio/img19.jpg" title="img16">
-          Now it's ready to go. At the end of this project, no changes were made to the radio at all. The next step is to make PCB's to allow me to repeat this upgrade in the future.
-
-      </div>
-      <div id="disqus_thread"></div>
-      <script>
-
-      /**
+ <head>
+  <link href="..\styles\style.css" id="local" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display|Roboto" rel="stylesheet" type="text/css"/>
+  <meta charset="utf-8"/>
+  <meta content="J. Ellzey" name="author"/>
+  <title>
+   Bluetooth Radio
+  </title>
+  <link href="..\favicon_12_10_19.png" id="local" rel="shortcut icon" type="image/x-icon"/>
+ </head>
+ <body>
+  <header>
+   <a href="..\..\index.html" id="local">
+    <img alt="Ellzey Electronics" id="local" src="..\header.jpg"/>
+   </a>
+  </header>
+  <nav id="access">
+   <ul>
+    <li>
+     <a href="https://ellzeyelectronics.myshopify.com/">
+      Store
+     </a>
+    </li>
+    <li>
+     <a href="..\contact.html" id="local">
+      Contact
+     </a>
+    </li>
+    <li>
+     <a href="..\resources\resources.html" id="local">
+      Resources
+     </a>
+    </li>
+    <li>
+     <a href="..\about.html" id="local">
+      About
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <main>
+   <h1 class="center-text">
+    Bluetooth Radio
+   </h1>
+   <div class="intro">
+    <img class="frame2" src="images/BT-radio/img20.jpg" title="Bluetooth Radio"/>
+    <p id="intro-text">
+     This Admiral 5A4 from 1956 gives you the time, date, day of the week, wakes you up with music, and offers a generous snooze cycle (tube warm-up time extends this even more). But because AM radio isn't what it used to be, I decided to add bluetooth to stream music from. Wishing to still preserve its originality, my goal was to make the bluetooth unit fit inside the radio without altering it physically or changing the circuit around. I wanted to be able to toggle the audio between both sources and I wanted to power it from 120V AC coming from the radio's on/off switch. I have a stash of bluetooth reciever modules that take a 5V supply and output a stereo audio signal so the main thing I had to figure out was how to power these boards and how to toggle the input.
+    </p>
+   </div>
+   <div class="main-content">
+    <img src="images/BT-radio/img13.jpg" title="img4"/>
+    Luckily, this radio came equipped with a switched phono jack that leads directly to the volume control. Plugging into this jack disconnects the audio amplifier from the reciever section of the radio and switches in whatever signal is sent through the jack. This means I don't even need to add a switch, I can just send a small length of cable out the back of the radio from the bluetooth module inside.
+    <img src="images/BT-radio/hot-chassis.JPG" title="hot chassis"/>
+    It's worth noting that this radio is a transformerless "hot chassis" design, meaning that the AC from the wall is connected to the ground of the circuit. This design, in combination with the un-polarized plug, means any metal inside could be connected to the live wire. The radio was designed to be well insulated in order to keep users from getting shocked but once inside, extra care should be taken to avoid any mishaps. I was using an isolation transformer and thick rubber gloves.
+    <img src="images/BT-radio/img22.png" title="img2"/>
+    This is the circuit I ended up with. It's a capacitive dropper that can put out around 80 mA. The AC is dropped by the impedance of C1, rectified, and sent to a linear regulator. Then, to avoid noise from ground loops, a DC-DC converter provides the bluetooth board with an isolated 5V. R1 is there to tame spikes. D5 ensures that the regulator only sees 10V max. C3, C4, C5, and L1 are chosen based on the datasheets of the active components. Lastly, the output from the bluetooth is summed to mono and sent to the phono input of the radio through R2 and R3.
+    <p>
+     My initial research of capacitive droppers led me to believe that C1 must be a safety capacitor but I don't think that would actually make the circuit safer in this case. Since an X rated capacitor would likely fail short, the low voltage side could get the full brunt of the wall voltage and destroy itself before the fuse even blows.
+    </p>
+    <p>
+     (Please know that this circuit is inherently dangerous. Like the radio, the power supply has no isolation so if you do attempt this circuit, do so at your own risk and please do your research before attempting to work with mains voltage.)
+    </p>
+    <img src="images/BT-radio/mrcoffee.jpg" title="img2"/>
+    A better option for C1 is a regular poly-film capacitor with a high voltage rating (at least 3 times wall voltage). This is a picture of the insides of a Mr. Coffee machine that uses a very similar circuit to power the low voltage electronics. It uses a 1.5 uF cap that is rated at 400V and I'll be using five .47 uF 630V capacitors in parallel because that's what I had in my droor.
+    <img src="images/BT-radio/img1.jpg" title="img4"/>
+    I first built the circuit on a breadboard to verify that it worked. I used a dummy load resistor to simulate the current draw and then replaced it with the actual bluetooth board.
+    <img src="images/BT-radio/img2.jpg" title="img5"/>
+    To provide the power, I soldered grey lamp cord to the switch and AC input and sent it through a hole in the chassis that just happened to be there already. That big bumblebee cap in the background was later removed. It was soldered across the line which is a bad place for an antique paper foil cap. All the other capacitors in the radio were upgraded to poly film types and the electrolytics were replaced.
+    <img src="images/BT-radio/img4.jpg" title="img6"/>
+    I wanted to make sure the radio was in good shape before putting everything back together so I started working on the plastic case with some epoxy. Here I used the resin to fill in where the plastic broke off.
+    <img src="images/BT-radio/img5.jpg" title="img7"/>
+    There was also a huge crack that needed to be fixed before anything could be put back in the case.
+    <img src="images/BT-radio/img9.jpg" title="img9"/>
+    The speaker was ripped in a couple places. This can be fixed with a little PVA glue and tissue paper.
+    <img src="images/BT-radio/img10.jpg" title="img9"/>
+    After the repair. This method provides a sturdy and flexible bond and works better than any other method I've tried for paper cones.
+    <img src="images/BT-radio/img7.jpg" title="img10"/>
+    Here is the prototype board all put together. I didn't have any fuse holders so I had to improvise.
+    <img src="images/BT-radio/img6.jpg" title="img12"/>
+    I soldered the bluetooth leads directly into the board and used terminal screws for the other connections.
+    <img src="images/BT-radio/img8.jpg" title="img13"/>
+    Testing the board with power from the radio
+    <img src="images/BT-radio/img11.jpg" title="img14"/>
+    To mount it inside, I made a bracket out of steel wire to hook onto an existing mounting screw on the clock assembly.
+    <img src="images/BT-radio/img12.jpg" title="img15"/>
+    This way it would take up minimal space and be the furthest from the heat-generating tubes.
+    <img src="images/BT-radio/img14.jpg" title="img16"/>
+    New plug soldered on. The right angle plug turned out to be too shallow to reach the jack so I went with the straight style.
+    <img src="images/BT-radio/img19.jpg" title="img16"/>
+    Now it's ready to go. At the end of this project, no changes were made to the radio at all. The next step is to make PCB's to allow me to repeat this upgrade in the future.
+   </div>
+   <div id="disqus_thread">
+   </div>
+   <script>
+    /**
       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
       /*
@@ -98,12 +110,43 @@
       s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);
       })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </main>
-
-  </body>
-     <footer>
-      <p>© Copyright 2020 Jacob Ellzey</p>
-    </footer>
+   </script>
+   <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">
+     comments powered by Disqus.
+    </a>
+   </noscript>
+  </main>
+  <div id="disqus_thread">
+  </div>
+  <script>
+   /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ellzeyelectronics-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>
+   Please enable JavaScript to view the
+   <a href="https://disqus.com/?ref_noscript">
+    comments powered by Disqus.
+   </a>
+  </noscript>
+ </body>
+ <footer>
+  <p>
+   &copy; Copyright 2022 Jacob Ellzey
+  </p>
+ </footer>
 </html>

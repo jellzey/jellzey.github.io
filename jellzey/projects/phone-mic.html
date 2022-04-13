@@ -1,107 +1,117 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-  	<link href="../styles/style.css" rel="stylesheet" type="text/css">
-  	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display|Roboto" rel="stylesheet" type='text/css'>
-    <meta charset="utf-8">
-    <meta name="author" content="J. Ellzey">
-    <title>Tele-microphone</title>
-    <link rel="shortcut icon" href="../favicon_12_10_19.png" type="image/x-icon">
-  </head> 
-
-
-  <body>
-
-    <header>
-      <a href="../../index.html">
-        <img id="header" src="../images/header.jpg" alt="J.Ellzey" title="header">
-      </a>
-    </header>
-
-    <nav id="access">
-      <ul>
-        <li><a href="../../index.html">Projects </a></li>
-        <!--<li><a href="../experiments/experiments.html">Experiments </a></li>-->
-        <li><a href="../contact.html"> Contact </a></li>
-        <li><a href="../about.html"> About </a></li>
-
-      </ul>
-    </nav>
-
-    <main>
-      <h1 class="center-text">Tele-microphone</h1>
-
-      <div class="intro">
-        <iframe src="https://www.youtube.com/embed/mNIv55mZ5zQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="frame1">
-        </iframe>
-        <p id="intro-text">
-        Here's a demo video of the finished product. It's a lo-fi microphone, vocal effect, and monitor all in one. It has a PT2399 delay circuit with adjustable time and feedback, a switchable bandpass filter to give an authentic telephone sound, and a monitor with adjustable volume in the handset so you can hear yourself. I had the idea after playing a lot of house shows with my band where we couldn't hear ourselves and the vocals always sounded dry and boring. Not anymore! And it looks pretty cool too. I made this one for a musician who wanted the limited bandwidth sound of an old telephone so this is the first time I included a switchable bandpass filter in the design and I'm very happy with how it turned out.
-        </p>
-     </div>
-
-      <div class="main-content">
-          <img src="images/phone-mic/img38.jpg" title="img0">
-          <img src="images/phone-mic/img0.jpg" title="img1">
-          This is the first bandpass filter I put together on the breadboard. It's a 6 pole Chebyshev which ended up getting scrapped. Next to it is the Western Electric model 500 chassis that needs to be gutted.
-          <img src="images/phone-mic/img1.jpg" title="img1">
-          When connecting an electret mic to the filter, I heard a resonance that was very un-musical. Ringing is to be expected with this type of filter though and is traded off for the super sharp cutoff that the Chebyshev has. I didn't expect it to be that noticeable though. A Butterworth filter is a better choice for audio so that's what I built next.
-          <img src="images/phone-mic/img12.jpg" title="img12">
-          Here's a shot of the 4-pole Butterworth bandpass. It has a center frequency of 1.85kHz and a bandwidth of 3kHz. I tested it again with the mic and a signal generator and didn't hear or see any resonance so I moved on to the delay module.
-          <img src="images/phone-mic/img23.jpg" title="img23">
-          I'm using this super convenient PT2399 board from Amazon. It's powered from the 9V supply and connected to the output of the filter. The pot connected to the board is for feedback level. The delay time is set with a fixed resistor.
-          <img src="images/phone-mic/img9.jpg" title="img9">
-          To make delay time adjustable, R27 must be removed and a 20 k&Omega; pot needs to be added.
-          <img src="images/phone-mic/img41.jpg" title="img36">
-          After testing the output from the delay module, I began working on the handset monitor. I used another convenient Amazon PCB this time to drive the speaker. Its an LM386 module with adjustable gain. I tried an output transformer between the speaker and the LM386 but the high impedance speaker didn't need it and it made no difference in output volume.
-          <img src="images/phone-mic/img43.jpg" title="img21">
-          This is the electret board that I made to go in the handset. It is possible to use the carbon capsule that comes in the handset but it's a little noisy, distorts more, and requires a trans-resistive amplifier. For this mic, I wanted to have a less distorted sound so I went with an electret.
-          <img src="images/phone-mic/img44.jpg" title="img21">
-          mounted in the handset.
-          <img src="images/phone-mic/img4.jpg" title="img4">
-          At this point, I added the volume control for the monitor, removed the diode clamp from the speaker, and rewired the handset for +5V, ground, monitor signal, and mic signal.
-          <img src="images/phone-mic/img42.jpg" title="img21">
-          Here's the diode clamp from the handset. I think it's there to ensure that the phone doesn't get too loud and hurt your ears. I want as much volume as I can get from this though so I removed it. It can be used it to clip an amplified signal as a cheap distortion effect or limiter so I'm throwing it in the parts bin for later.
-          <img src="images/phone-mic/img6.jpg" title="img6">
-          I wired the handset up for a final test and then started soldering the board.
-          <img src="images/phone-mic/img34.jpg" title="img21">
-          sockets, regulator, and filter caps
-          <img src="images/phone-mic/img8.jpg" title="img21">
-          added more filter caps, a split rail buffer for virtual ground, and the first stage of the filter
-          <img src="images/phone-mic/img10.jpg" title="img21">
-          second stage added and tested
-          <img src="images/phone-mic/img11.jpg" title="img11">
-          I crimped a connector to make it easier to remove from the final assembly when it doesn't work.
-          <img src="images/phone-mic/img14.jpg" title="img14">
-          Starting to mount parts in the case. I installed a switch for the filter, a DC barrel jack, some LED's, and a board for the time control pot.
-          <img src="images/phone-mic/img15.jpg" title="img15">
-          Drilled a couple holes and used epoxy to mount the standoffs
-          <img src="images/phone-mic/img18.jpg" title="img18">
-          Using a 1/4" TRS jack to act as a power switch so the battery doesn't drain unless its plugged in
-          <img src="images/phone-mic/img19.jpg" title="img19">
-          battery clip glued in place
-          <img src="images/phone-mic/img21.jpg" title="img21">
-          I soldered a socket to another tiny proto-board to act as a mount for the LM386 module.
-          
-          <img src="images/phone-mic/img25.jpg" title="img21">
-          Final testing of the rats nest. Of course it didn't work on the first try.
-          <img src="images/phone-mic/img26.jpg" title="img21">
-          Using the breadboard as a guide, I traced the problem to a wrong connection on the filter board.
-          <img src="images/phone-mic/img27.jpg" title="img21">
-          Once it worked, I cleaned up the wiring job with some zip ties.
-          <img src="images/phone-mic/img28.jpg" title="img21">
-          I wanted the act of hanging up the phone to mute its output so I connected a normally open section of the line switch across the output. Now it grounds the output when you hang up the phone.
-          <img src="images/phone-mic/img29.jpg" title="img21">
-          another angle
-          <img src="images/phone-mic/img30.jpg" title="img21">
-          ready for some final audio tests
-          <img src="images/phone-mic/img38.jpg" title="img21">
-          All put together. My friend 3D printed some mic clips that fit the handset perfectly
-          
-      </div>
-     <div id="disqus_thread"></div>
-     <script>
-
-     /**
+ <head>
+  <link href="..\styles\style.css" id="local" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display|Roboto" rel="stylesheet" type="text/css"/>
+  <meta charset="utf-8"/>
+  <meta content="J. Ellzey" name="author"/>
+  <title>
+   Tele-microphone
+  </title>
+  <link href="..\favicon_12_10_19.png" id="local" rel="shortcut icon" type="image/x-icon"/>
+ </head>
+ <body>
+  <header>
+   <a href="..\..\index.html" id="local">
+    <img alt="Ellzey Electronics" id="local" src="..\header.jpg"/>
+   </a>
+  </header>
+  <nav id="access">
+   <ul>
+    <li>
+     <a href="https://ellzeyelectronics.myshopify.com/">
+      Store
+     </a>
+    </li>
+    <li>
+     <a href="..\contact.html" id="local">
+      Contact
+     </a>
+    </li>
+    <li>
+     <a href="..\resources\resources.html" id="local">
+      Resources
+     </a>
+    </li>
+    <li>
+     <a href="..\about.html" id="local">
+      About
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <main>
+   <h1 class="center-text">
+    Tele-microphone
+   </h1>
+   <div class="intro">
+    <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="frame1" frameborder="0" src="https://www.youtube.com/embed/mNIv55mZ5zQ">
+    </iframe>
+    <p id="intro-text">
+     Here's a demo video of the finished product. It's a lo-fi microphone, vocal effect, and monitor all in one. It has a PT2399 delay circuit with adjustable time and feedback, a switchable bandpass filter to give an authentic telephone sound, and a monitor with adjustable volume in the handset so you can hear yourself. I had the idea after playing a lot of house shows with my band where we couldn't hear ourselves and the vocals always sounded dry and boring. Not anymore! And it looks pretty cool too. I made this one for a musician who wanted the limited bandwidth sound of an old telephone so this is the first time I included a switchable bandpass filter in the design and I'm very happy with how it turned out.
+    </p>
+   </div>
+   <div class="main-content">
+    <img src="images/phone-mic/img38.jpg" title="img0"/>
+    <img src="images/phone-mic/img0.jpg" title="img1"/>
+    This is the first bandpass filter I put together on the breadboard. It's a 6 pole Chebyshev which ended up getting scrapped. Next to it is the Western Electric model 500 chassis that needs to be gutted.
+    <img src="images/phone-mic/img1.jpg" title="img1"/>
+    When connecting an electret mic to the filter, I heard a resonance that was very un-musical. Ringing is to be expected with this type of filter though and is traded off for the super sharp cutoff that the Chebyshev has. I didn't expect it to be that noticeable though. A Butterworth filter is a better choice for audio so that's what I built next.
+    <img src="images/phone-mic/img12.jpg" title="img12"/>
+    Here's a shot of the 4-pole Butterworth bandpass. It has a center frequency of 1.85kHz and a bandwidth of 3kHz. I tested it again with the mic and a signal generator and didn't hear or see any resonance so I moved on to the delay module.
+    <img src="images/phone-mic/img23.jpg" title="img23"/>
+    I'm using this super convenient PT2399 board from Amazon. It's powered from the 9V supply and connected to the output of the filter. The pot connected to the board is for feedback level. The delay time is set with a fixed resistor.
+    <img src="images/phone-mic/img9.jpg" title="img9"/>
+    To make delay time adjustable, R27 must be removed and a 20 k&Omega; pot needs to be added.
+    <img src="images/phone-mic/img41.jpg" title="img36"/>
+    After testing the output from the delay module, I began working on the handset monitor. I used another convenient Amazon PCB this time to drive the speaker. Its an LM386 module with adjustable gain. I tried an output transformer between the speaker and the LM386 but the high impedance speaker didn't need it and it made no difference in output volume.
+    <img src="images/phone-mic/img43.jpg" title="img21"/>
+    This is the electret board that I made to go in the handset. It is possible to use the carbon capsule that comes in the handset but it's a little noisy, distorts more, and requires a trans-resistive amplifier. For this mic, I wanted to have a less distorted sound so I went with an electret.
+    <img src="images/phone-mic/img44.jpg" title="img21"/>
+    mounted in the handset.
+    <img src="images/phone-mic/img4.jpg" title="img4"/>
+    At this point, I added the volume control for the monitor, removed the diode clamp from the speaker, and rewired the handset for +5V, ground, monitor signal, and mic signal.
+    <img src="images/phone-mic/img42.jpg" title="img21"/>
+    Here's the diode clamp from the handset. I think it's there to ensure that the phone doesn't get too loud and hurt your ears. I want as much volume as I can get from this though so I removed it. It can be used it to clip an amplified signal as a cheap distortion effect or limiter so I'm throwing it in the parts bin for later.
+    <img src="images/phone-mic/img6.jpg" title="img6"/>
+    I wired the handset up for a final test and then started soldering the board.
+    <img src="images/phone-mic/img34.jpg" title="img21"/>
+    sockets, regulator, and filter caps
+    <img src="images/phone-mic/img8.jpg" title="img21"/>
+    added more filter caps, a split rail buffer for virtual ground, and the first stage of the filter
+    <img src="images/phone-mic/img10.jpg" title="img21"/>
+    second stage added and tested
+    <img src="images/phone-mic/img11.jpg" title="img11"/>
+    I crimped a connector to make it easier to remove from the final assembly when it doesn't work.
+    <img src="images/phone-mic/img14.jpg" title="img14"/>
+    Starting to mount parts in the case. I installed a switch for the filter, a DC barrel jack, some LED's, and a board for the time control pot.
+    <img src="images/phone-mic/img15.jpg" title="img15"/>
+    Drilled a couple holes and used epoxy to mount the standoffs
+    <img src="images/phone-mic/img18.jpg" title="img18"/>
+    Using a 1/4" TRS jack to act as a power switch so the battery doesn't drain unless its plugged in
+    <img src="images/phone-mic/img19.jpg" title="img19"/>
+    battery clip glued in place
+    <img src="images/phone-mic/img21.jpg" title="img21"/>
+    I soldered a socket to another tiny proto-board to act as a mount for the LM386 module.
+    <img src="images/phone-mic/img25.jpg" title="img21"/>
+    Final testing of the rats nest. Of course it didn't work on the first try.
+    <img src="images/phone-mic/img26.jpg" title="img21"/>
+    Using the breadboard as a guide, I traced the problem to a wrong connection on the filter board.
+    <img src="images/phone-mic/img27.jpg" title="img21"/>
+    Once it worked, I cleaned up the wiring job with some zip ties.
+    <img src="images/phone-mic/img28.jpg" title="img21"/>
+    I wanted the act of hanging up the phone to mute its output so I connected a normally open section of the line switch across the output. Now it grounds the output when you hang up the phone.
+    <img src="images/phone-mic/img29.jpg" title="img21"/>
+    another angle
+    <img src="images/phone-mic/img30.jpg" title="img21"/>
+    ready for some final audio tests
+    <img src="images/phone-mic/img38.jpg" title="img21"/>
+    All put together. My friend 3D printed some mic clips that fit the handset perfectly
+   </div>
+   <div id="disqus_thread">
+   </div>
+   <script>
+    /**
      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
      /*
@@ -116,12 +126,43 @@
      s.setAttribute('data-timestamp', +new Date());
      (d.head || d.body).appendChild(s);
      })();
-     </script>
-     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </main>
-
-  </body>
-     <footer>
-      <p>© Copyright 2020 Jacob Ellzey</p>
-    </footer>
+   </script>
+   <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">
+     comments powered by Disqus.
+    </a>
+   </noscript>
+  </main>
+  <div id="disqus_thread">
+  </div>
+  <script>
+   /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ellzeyelectronics-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>
+   Please enable JavaScript to view the
+   <a href="https://disqus.com/?ref_noscript">
+    comments powered by Disqus.
+   </a>
+  </noscript>
+ </body>
+ <footer>
+  <p>
+   &copy; Copyright 2022 Jacob Ellzey
+  </p>
+ </footer>
 </html>
