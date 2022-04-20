@@ -101,7 +101,41 @@ def makeNew(name):
     newHTML=soup.prettify(formatter='html')
     f.write(newHTML)
     f.close()
-
+    print('done')
+    
+def populate(name):
+    imagesPath= 'images\\'+Path(name).stem+'\\'
+    
+    #generates main content and loads the page with images from corresponding folder
+    loadMaster();
+    
+    f=open(name,encoding=ENCODING) #load page into soup
+    soup2=bs4.BeautifulSoup(f,features='html.parser')
+    f.close()
+    
+    #replace main content with template from master
+    soup2.main.replace_with(soup.main)
+    #add intro photo
+    soup2.select('.intro')[0].img['src']= imagesPath + 'img0.jpg'
+    i=0
+    main=soup2.main.find_all('div')[1]
+    main.img['src']=imagesPath+ 'img0.jpg'
+    main.img['title']='img0.jpg'
+    for filename in os.listdir(imagesPath):
+        if i>0:
+            loadMaster()
+            temp=soup.main.find_all('div')[1].img
+            temp['src']=imagesPath+ filename
+            temp['title']=Path(filename).stem
+            main.append(temp)
+            main.append('\n Lorem Ipsum dolor?? I hardly know her!!\n')
+        i+=1
+        
+    newHTML=soup2.prettify(formatter='html')
+    f=open(name,'w',encoding=ENCODING)
+    f.write(newHTML)
+    f.close()
+    
 def configureImages(folder):
     #scales down raw images and adds them to the project folder of the same name. If the folder exists,
     #it adds the images and indexes the new filenames to continue from the highest in the folder
