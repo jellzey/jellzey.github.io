@@ -104,33 +104,40 @@ def makeNew(name):
     print('done')
     
 def populate(name):
-    imagesPath= 'images\\'+Path(name).stem+'\\'
-    
     #generates main content and loads the page with images from corresponding folder
+    
+    imagesPath= 'images\\'+Path(name).stem+'\\'
     loadMaster();
     
     f=open(name,encoding=ENCODING) #load page into soup
     soup2=bs4.BeautifulSoup(f,features='html.parser')
     f.close()
-    
     #replace main content with template from master
     soup2.main.replace_with(soup.main)
-    #add intro photo
+    #add intro photo and set title
     soup2.select('.intro')[0].img['src']= imagesPath + 'img0.jpg'
-    i=0
+    soup2.select('.intro')[0].img['title']= 'intro image'
+    #set first image
     main=soup2.main.find_all('div')[1]
     main.img['src']=imagesPath+ 'img0.jpg'
-    main.img['title']='img0.jpg'
+    main.img['title']='img0'
+    i=0
     for filename in os.listdir(imagesPath):
+        #iterate through all images and make placeholders in the html
         if i>0:
+            #Because I already set the first image out of the loop, I need to start from i=1.
+            #This keeps the img0 from showing up 3 times. Couldn't come up with a better way to do this
             loadMaster()
             temp=soup.main.find_all('div')[1].img
             temp['src']=imagesPath+ filename
             temp['title']=Path(filename).stem
+            #append is the easiest way to add content. This is why the first image is set out of the loop
             main.append(temp)
             main.append('\n Lorem Ipsum dolor?? I hardly know her!!\n')
         i+=1
-        
+    #change title 
+    soup2.h1.string=soup2.title.string
+    #save and write to file
     newHTML=soup2.prettify(formatter='html')
     f=open(name,'w',encoding=ENCODING)
     f.write(newHTML)
