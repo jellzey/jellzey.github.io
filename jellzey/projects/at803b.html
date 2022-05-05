@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-US">
  <head>
-  <link href="C:\Users\jellz\Desktop\PythonCMS-Local\jellzey.github.io\jellzey\styles\style.css" id="local" rel="stylesheet" type="text/css"/>
+  <link href="..\styles\style.css" id="local" rel="stylesheet" type="text/css"/>
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display|Roboto" rel="stylesheet" type="text/css"/>
   <meta charset="utf-8"/>
   <meta content="J. Ellzey" name="author"/>
   <title>
    AT803b
   </title>
-  <link href="C:\Users\jellz\Desktop\PythonCMS-Local\jellzey.github.io\jellzey\favicon_12_10_19.png" id="local" rel="shortcut icon" type="image/x-icon"/>
+  <link href="..\favicon_12_10_19.png" id="local" rel="shortcut icon" type="image/x-icon"/>
  </head>
  <body>
   <header>
-   <a href="C:\Users\jellz\Desktop\PythonCMS-Local\jellzey.github.io\index.html" id="local">
-    <img alt="Ellzey Electronics" id="local" src="C:\Users\jellz\Desktop\PythonCMS-Local\jellzey.github.io\jellzey\header.jpg"/>
+   <a href="..\..\index.html" id="local">
+    <img alt="Ellzey Electronics" id="local" src="..\header.jpg"/>
    </a>
   </header>
   <nav id="access">
@@ -24,17 +24,17 @@
      </a>
     </li>
     <li>
-     <a href="C:\Users\jellz\Desktop\PythonCMS-Local\jellzey.github.io\jellzey\contact.html" id="local">
+     <a href="..\contact.html" id="local">
       Contact
      </a>
     </li>
     <li>
-     <a href="C:\Users\jellz\Desktop\PythonCMS-Local\jellzey.github.io\jellzey\resources\resources.html" id="local">
+     <a href="..\resources\resources.html" id="local">
       Resources
      </a>
     </li>
     <li>
-     <a href="C:\Users\jellz\Desktop\PythonCMS-Local\jellzey.github.io\jellzey\about.html" id="local">
+     <a href="..\about.html" id="local">
       About
      </a>
     </li>
@@ -47,12 +47,21 @@
    <div class="intro">
     <img class="frame2" src="images\at803b\img4.jpg" title="intro image"/>
     <p id="intro-text">
-     I repaired this Audio Technica lavalier microphone and decided to reverse engineer the preamp out of my own curiosity. The repair was just a matter of shortening the cable to remove a broken connection inside. More interesting than that is the way this preamp adjusts itself to operate on either 1.5V from a AA battery or 12-48V phantom power using all analog circuitry. An electret condenser microphone feeds some tone shaping circuitry which leads to the base of an emitter follower. The transistor drives a small output transformer which is wired to provide a balanced signal at the XLR output. The power supply is a bit more complicated and involves several diodes for current steering, reverse polarity protection, and regulation as well as a JFET to control the voltage supplied to the electret mic. 
+     I repaired this Audio Technica lavalier microphone and decided to reverse engineer the preamp out of my own curiosity. The repair was just a matter of shortening the cable to remove a broken connection inside. More interesting than that is the way this preamp adjusts itself to operate on either 1.5V from a AA battery or 12-48V phantom power using all analog circuitry. An electret condenser microphone feeds some tone shaping circuitry which leads to the base of an emitter follower. The transistor drives a small output transformer which is wired to provide a balanced signal at the XLR output. The power supply is a bit more complicated and involves several diodes for current steering, reverse polarity protection, and regulation as well as a JFET to control the voltage supplied to the electret mic.
     </p>
    </div>
    <div class="main-content">
     <img src="images\at803b\img0.jpg" title="AT803b microphone schematic"/>
-    After a bit of poking around, this is the schematic that I ended up with. I took voltage measurements at several spots for both battery and phantom power which are shown in red.<p></p> The microphone is powered by the voltage from Vcc to R1 and sends a signal to coupling caps C3 and C4. The low cut control switches in a high value resistor to force the signal through a series of high pass filters formed by C4, R4, C5, R6, and C6. The signal then enters the base of Q1 and appears across R9, buffered and ready to drive T1 through coupling cap C8 and R10. Two outputs are taken from the transformer secondary, each with 1/2 the amplitude of the primary and opposite the other in phase. This balanced signal pair is connected to pins 2 and 3 of the XLR output jack. <p></p> When powered by a battery, germanium resistor D4 protects the circuit and the battery from reverse polarity. Using a germainum diode eliminates the large voltage drop that would ammount to almost half of the available supply voltage if a silicon diode were used.<p></p> Phantom power is applied to the hot and cold pins of the XLR jack. A small DC current flows from both ends of the secondary through center tap and then through D5. D3 regulates the voltage on the other side of D5 and D2 supplies the Vcc node. When this voltage is present, D4 is reverse biased, cutting off the battery supply. D2 also keeps the battery voltage from turning off Q2 when phantom voltage is not used. Since Q2 is a depletion mode JFET, it has a low resistance between its drain and source until voltage is present at its gate. It acts as a short during battery operation and as a large resistance with phantom power (12k max across Q2 because of R2). This keeps the voltage across the microphone from geting too high. Zener diode D1 serves a similar voltage limiting function, ensuring that Q1 does not reach saturation when operating on phantom power.
+    After a bit of poking around, this is the schematic that I ended up with. I took voltage measurements at several spots for both battery and phantom power which are shown in red.
+    <p>
+    </p>
+    The microphone is powered by the voltage from Vcc to R1 and sends a signal to coupling caps C3 and C4. The low cut control switches in a high value resistor to force the signal through a series of high pass filters formed by C4, R4, C5, R6, and C6. The signal then enters the base of Q1 and appears across R9, buffered and ready to drive T1 through coupling cap C8 and R10. Two outputs are taken from the transformer secondary, each with 1/2 the amplitude of the primary and opposite the other in phase. This balanced signal pair is connected to pins 2 and 3 of the XLR output jack.
+    <p>
+    </p>
+    When powered by a battery, germanium resistor D4 protects the circuit and the battery from reverse polarity. Using a germainum diode eliminates the large voltage drop that would ammount to almost half of the available supply voltage if a silicon diode were used.
+    <p>
+    </p>
+    Phantom power is applied to the hot and cold pins of the XLR jack. A small DC current flows from both ends of the secondary through center tap and then through D5. D3 regulates the voltage on the other side of D5 and D2 supplies the Vcc node. When this voltage is present, D4 is reverse biased, cutting off the battery supply. D2 also keeps the battery voltage from turning off Q2 when phantom voltage is not used. Since Q2 is a depletion mode JFET, it has a low resistance between its drain and source until voltage is present at its gate. It acts as a short during battery operation and as a large resistance with phantom power (12k max across Q2 because of R2). This keeps the voltage across the microphone from geting too high. Zener diode D1 serves a similar voltage limiting function, ensuring that Q1 does not reach saturation when operating on phantom power.
     <img src="images\at803b\img3.jpg" title="img3"/>
     <img src="images\at803b\img5.jpg" title="img5"/>
    </div>
