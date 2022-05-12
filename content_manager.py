@@ -89,6 +89,7 @@ def formatAll():
 
 def makeNew(name):
     #creates a new HTML file based on the master file
+    #loads images from specified folder
     loadMaster()
     f=open(PROJ_PATH+name +'.html','w',encoding=ENCODING)
     f.write('<HTML><title>'+name+'</title></HTML>')
@@ -101,11 +102,12 @@ def makeNew(name):
     newHTML=soup.prettify(formatter='html')
     f.write(newHTML)
     f.close()
+    populate(name+'.html')
     print('done')
     
 def populate(name):
     #generates main content and loads the page with images from corresponding folder
-    
+    os.chdir(PROJ_PATH)
     imagesPath= 'images\\'+Path(name).stem+'\\'
     loadMaster();
     
@@ -133,7 +135,7 @@ def populate(name):
             temp['title']=Path(filename).stem
             #append is the easiest way to add content. This is why the first image is set out of the loop
             main.append(temp)
-            main.append('\n Lorem Ipsum dolor?? I hardly know her!!\n')
+            main.append('\n Lorem Ipsum dolor?? I hardly know her!\n')
         i+=1
     #change title 
     soup2.h1.string=soup2.title.string
@@ -145,7 +147,7 @@ def populate(name):
     
 def configureImages(folder):
     #scales down raw images and adds them to the project folder of the same name. If the folder exists,
-    #it adds the images and indexes the new filenames to continue from the highest in the folder
+    #adds the images and indexes the new filenames to continue from the highest in the folder
     initialPath = '../raw-images/' + folder
     folderPath = './jellzey/projects/images/'+folder
     fileSequence = 0
