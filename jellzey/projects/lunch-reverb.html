@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <link href="..\styles\style.css" id="local" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display|Roboto" rel="stylesheet" type="text/css"/>
+  <meta charset="utf-8"/>
+  <meta content="J. Ellzey" name="author"/>
+  <title>
+   Lunch-reverb
+  </title>
+  <link href="..\favicon_12_10_19.png" id="local" rel="shortcut icon" type="image/x-icon"/>
+ </head>
+ <body>
+  <header>
+   <a href="..\..\index.html" id="local">
+    <img alt="Ellzey Electronics" id="local" src="..\header.jpg"/>
+   </a>
+  </header>
+  <nav id="access">
+   <ul>
+    <!-- <li>
+     <a href="https://ellzeyelectronics.myshopify.com/">
+      Store
+     </a>
+    </li> -->
+    <li>
+     <a href="..\contact.html" id="local">
+      Contact
+     </a>
+    </li>
+    <li>
+     <a href="..\resources\resources.html" id="local">
+      Resources
+     </a>
+    </li>
+    <li>
+     <a href="..\about.html" id="local">
+      About
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <main>
+   <h1 class="center-text">
+    Lunchbox Reverb
+   </h1>
+   <div class="intro">
+    <img class="frame2" src="images\lunch-reverb\img24.jpg" title="intro image"/>
+    <p id="intro-text">
+     This spring reverb was designed to fit inside a metal-dome style lunchbox. The lunchbox allows it to be very portable with an added layer of security through obscurity. The goal was to create something that would sound good through a guitar amp and also as a send in a recording environment. It can be powered from the standard 9V guitar pedal adapter but it's designed to allow AC or DC supplies up to 15V to be used. The foot switch is not true bypass which means the signal level does not change with the effect's presence - one less thing to worry about at sound-check. The resonance control adds a peak around 1.5-2kHz at the tank's output. The intended use is to accentuate the "drip-drop" attack response of the springs on picked notes. The mix control totally isolates the dry and wet signals at both extremes and gives a wide range of ratios in between. The boost control can be set to give up to 15dB of gain at the output which helps to make up for losses in the mix pot and also makes this unit capable of overdriving preamp tubes or acting as a preamp itself.
+    </p>
+   </div>
+   <div class="main-content">
+    <img src="images\lunch-reverb\img0.jpg" title="img0"/>
+    The breadboard on the left is where I started. Once I was happy with that, I copied the circuit onto the protoboard.
+    <img src="images\lunch-reverb\img4.jpg" title="img4"/>
+    It's always a pain to crimp a bunch of connectors but I was glad I did when I started making changes to the design. I used JST-XH connectors for everything on the main board and mounted it to a piece of fiberboard.
+    <img src="images\lunch-reverb\img9.jpg" title="img9"/>
+    I use these
+    <a href="https://dreyerelectronics.com/collections/perforated-boards/products/modular-perforated-board">
+     snappable PCB's
+    </a>
+    for making connections to through hole pots and for adding related components like the gain-limiting resistor in this picture. Shoutout to
+    <a href="https://dreyerelectronics.com/">
+     Dryer Electronics
+    </a>
+    <img src="images\lunch-reverb\img6.jpg" title="img6"/>
+    Cleaned the bench for a final test after making some changes to the circuit and it's ready to assemble.
+    <img src="images\lunch-reverb\img20.jpg" title="img20"/>
+    I couldn't believe how perfectly a type 8 reverb tank fits inside a lunchbox like this. The stamped feet of the lunchbox match almost exactly with the mounting holes of the tank. I added some rubber feet and used extra long machine screws to extend through the tank grommets. The plastic plug allows for access to the springs so I could stuff the tank with foam before shipping it.
+    <img src="images\lunch-reverb\img11.jpg" title="img11"/>
+    Inside the lunchbox, I used M4 standoffs connected to the foot screws.
+    <img src="images\lunch-reverb\img12.jpg" title="img12"/>
+    Four more standoffs secure all the electronics. The power supply board is mounted on another fiberboard strip to the left and the control panel has been drilled and controls test-fitted in front.
+    <img src="images\lunch-reverb\img13.jpg" title="img13"/>
+    Keeping the wires tidy. I ended up installing shielded cable on the input jack just because it felt a little wrong not to but I actually didn't have problems with noise either way.
+    <img src="images\lunch-reverb\img14.jpg" title="img14"/>
+    It lives
+    <img src="images\lunch-reverb\img15.jpg" title="img15"/>
+    First tests
+    <img src="images\lunch-reverb\img22.jpg" title="img16"/>
+    The control panel looked kind of boring so I added an adhesive plastic mirror cut to the same angle as the controls. Mirrors look cool onstage. I also labeled all the controls and tightened the acorn nuts for the final assembly.
+    <img src="images\lunch-reverb\img18.jpg" title="img17"/>
+    From the outside you'd never know.
+    <img src="images\lunch-reverb\img25.jpg" title="img18"/>
+    Very stoked with how this one turned out
+    <img src="images\lunch-reverb\img28.jpg" title="img19"/>
+   </div>
+  </main>
+  <div id="disqus_thread">
+  </div>
+  <script>
+   /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ellzeyelectronics-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>
+   Please enable JavaScript to view the
+   <a href="https://disqus.com/?ref_noscript">
+    comments powered by Disqus.
+   </a>
+  </noscript>
+ </body>
+ <footer>
+  <p>
+   &copy; Copyright 2022 Jacob Ellzey
+  </p>
+ </footer>
+</html>
