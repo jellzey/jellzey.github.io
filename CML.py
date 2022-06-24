@@ -138,7 +138,7 @@ def populate(name):
             temp['title']=Path(filename).stem
             #append is the easiest way to add content. This is why the first image is set out of the loop
             main.append(temp)
-            main.append('\n Lorem Ipsum dolor?? I hardly know her!\n')
+            main.append('\n \n')
         i+=1
     #change title 
     soup2.h1.string=soup2.title.string
@@ -376,6 +376,7 @@ def git_push(message):
         repo.index.commit(message)
         origin = repo.remote(name='origin')
         origin.push()
+        print('done')
     except:
         print('Some error occured while pushing the code')
         
