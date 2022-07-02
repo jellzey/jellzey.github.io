@@ -188,7 +188,7 @@ def configureImages(folder):
 def clearImages(folder):
     #deletes image folder
     folderPath = PROJ_PATH + 'images\\'+folder
-    print('Clearing '+ folderPath )
+    print('Cleaning '+ folderPath )
     try:
         shutil.rmtree(folderPath)
     except OSError as e:

@@ -85,6 +85,31 @@
     <img src="images\lunch-reverb\img25.jpg" title="img18"/>
     Very stoked with how this one turned out
     <img src="images\lunch-reverb\img28.jpg" title="img19"/>
+    Once I had tested the reverb out for a while to make sure it was working as intended, I copied the final schematic into EAGLE. Below is the circuit that was on the proto-board.
+    <img src="images\lunch-reverb\img31.jpg" title="img20"/>
+    <div>
+     <p>
+      The input and output amplifiers are based on circuits from D. Self,
+      <i>
+       Small Signal Audio Design
+      </i>
+      . The input is a simple guitar input buffer and the output is a "zero impedance" amplifier with 15dB of gain available through the pot. The wet and dry signals are mixed in the 10k potentiometer at the non-inverting input of the output amplifier.
+     </p>
+    </div>
+    <div>
+     <p>
+      The reverb driver is an LM386 audio amplifier configured for 20dB of gain. My reasoning for using this part was based on its cost, parts count, and intended purpose of driving audio through 8 ohm loads at low power. I have yet to actually crunch the numbers but it seems like a pretty good use for this chip. I'm hoping to go more in depth about that in the future and compare different tank drivers.
+     </p>
+     <p>
+      At the non-inverting input, C3 and R5 form a high pass filter which attenuates the signal across the whole guitar spectrum and leaves the signal with a 6dB/octave slope that helps to flatten the low-pass characteristics of the tank's input transducer. C3 was chosen to give 28mA through the 8&Omega; coil after 20dB of gain from the LM386 with a signal voltage of 100mV at the input.
+     </p>
+     <p>
+      The recovery amp uses the other side of the TL072 and has a gain of 20. The "resonance" control resistively couples C12 across the output transducer coil, forming a tank circuit with a frequency in the treble range. I picked C12 by ear to give the most pleasing attack sound with a guitar. R8 is there to approximate a log taper and give a more useful range to the pot.
+     </p>
+     <p>
+      The power supply uses a full bridge so that any polarity supply can be connected. In the future, it might be a good idea to add some regulation and another filter stage to ensure that AC supplies won't cause any trouble but for now, the circuit works with voltages up to 15V DC.
+     </p>
+    </div>
    </div>
   </main>
   <div id="disqus_thread">

@@ -6,7 +6,7 @@ import CML
 print("Content Manager 9000\n")
 
 while True:
-    print('Enter command (new, pub, hid, del, end)\n')
+    print('Enter command (new, pub, hid, del, img, end)\n')
     cmd=input()
     if cmd=='new':
         print('Create a new page from image folder\n')
@@ -55,6 +55,18 @@ while True:
         ans=input()
         if ans=='y':
             CML.hidePage(answer)
+        else:
+            print('Action cancelled')
+    elif cmd=='img':
+        print('Update images\n')
+        CML.printActivePages(CML.PROJ_PATH)
+        print('Enter page name')
+        answer=input()
+        print('Update images in '+ answer + '? (y/any char)')
+        ans=input()
+        if ans=='y':
+            CML.clearImages(answer)
+            CML.configureImages(answer)
         else:
             print('Action cancelled')
     elif cmd=='end':
