@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <link href="..\styles\style.css" id="local" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display|Roboto" rel="stylesheet" type="text/css"/>
+  <meta charset="utf-8"/>
+  <meta content="J. Ellzey" name="author"/>
+  <title>
+   Pendulum Preamp
+  </title>
+  <link href="..\favicon_12_10_19.png" id="local" rel="shortcut icon" type="image/x-icon"/>
+ </head>
+ <body>
+  <header>
+   <a href="..\..\index.html" id="local">
+    <img alt="Ellzey Electronics" id="local" src="..\header.jpg"/>
+   </a>
+  </header>
+  <nav id="access">
+   <ul>
+    <!-- <li>
+     <a href="https://ellzeyelectronics.myshopify.com/">
+      Store
+     </a>
+    </li> -->
+    <li>
+     <a href="..\contact.html" id="local">
+      Contact
+     </a>
+    </li>
+    <li>
+     <a href="..\resources\resources.html" id="local">
+      Resources
+     </a>
+    </li>
+    <li>
+     <a href="..\about.html" id="local">
+      About
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <main>
+   <h1 class="center-text">
+    Pendulum Preamp
+   </h1>
+   <div class="intro">
+    <img class="frame2" src="images\pendulum-preamp\img14.jpg" title="intro image"/>
+    <p id="intro-text">
+     This guitar preamp came to me partially disassembled with a couple of disconnected wires and a busted switching jack. I was asked to resolder the wires to the correct pads and figure out why it wasn't working (but not actually fix it) so I decided to trace the circuit and make a schematic to ensure all the wires were going to the correct places. Reverse engineering a PCB takes time but is well worth it for the satisfaction and convenience of having a full schematic and the chance that it might help someone else fix their gear in the future.
+    </p>
+   </div>
+   <div class="main-content">
+    <img src="images\pendulum-preamp\img0.jpg" title="img0"/>
+    I removed the board from the enclosure and started following the traces
+    <img src="images\pendulum-preamp\img11.jpg" title="img11"/>
+    This board looks like it was modified in production. There are cut traces, bodge wires, and unpopulated footprints. I removed a couple components to make following the top layer easier. Marking the traces with a couple sharpies helps to keep things straight.
+    <img src="images\pendulum-preamp\img10.jpg" title="img10"/>
+    Top side with components removed
+    <img src="images\pendulum-preamp\img7.jpg" title="img7"/>
+    After tracing the schematic, everything went back on the board
+    <img src="images\pendulum-preamp\schem.png" title="schematic"/>
+    This is the schematic that I ended up with. Nothing too surprising other than the 20.5k resistor which must have been in surplus or very cheap at the time parts were sourced. I can't think of any other reason for that oddball value.
+    <br/>
+    <ul>
+     <li>
+      The signal comes in through the chassis mounted phone jack on the left.
+     </li>
+     <li>
+      D1 and D2 ensure that the input doesnt exceed 12 V in either direction and a ferrite bead slows down any RF from getting the chance to demodulate in the audio section.
+     </li>
+     <li>
+      R1 sets the input impedance to 10M and cascaded transistor voltage followers provide a low impedance output for the following stage without loading down the pickup. A JFET is used first because its input impedance is higher than a BJT's.
+     </li>
+     <li>
+      The trim-pot R9 sets the gain range for the following op amp stage. This stage is a standard inverting amplifier with the gain control pot in the feedback path.
+     </li>
+     <li>
+      The parallel capacitor C3 improves stability by reducing gain at high frequencies.
+     </li>
+     <li>
+      R5 is a 'build-out' resistor that helps to isolate the output of the amp from the cable's capacitance. Capacitive loads can give op amps peaking and oscillation problems as well as reduce their bandwidth and slew rate so a resistor is used to dampen the resonance.
+     </li>
+     <li>
+      The audio output is coupled through an electrolytic cap and travels through a 2 conductor shielded cable alongside the wire connected to the negative terminal of the battery.
+     </li>
+     <li>
+      To eliminate battery drain while not in use, the phone plug at the end of the output cable includes a button that gets pushed in when the plug is inserted into a jack. The button connects the battery's negative terminal through the shield to ground, allowing current to flow.
+     </li>
+     <li>
+      The power supply is simple and includes a polarity protection diode D3 and the split rail supply which is just a voltage divider and 2 stabilizing caps to provide a reference for the non inverting opamp pin.
+     </li>
+     <li>
+      D3 prevents a backwards battery connection by shunting reverse current to ground, a design choice that trades the .6V drop of a series diode with the possible destruction of the diode and any incorrectly connected battery
+     </li>
+     <li>
+      The battery used is an A23 12V type. I couldn't find any info on its possible short circuit current but I assume that it isnt more than the 300mA that is required to kill a 1N4148 diode. Even if it was, most diodes will fail short so the circuit would still be protected in most cases.
+     </li>
+    </ul>
+    <img src="images\pendulum-preamp\img13.jpg" title="img13"/>
+    The main problem with this particular unit was its ouput plug
+    <img src="images\pendulum-preamp\img8.jpg" title="img8"/>
+    A piece had broken off of the switch that prevented the power from reaching the circuit.
+    <img src="images\pendulum-preamp\img14.jpg" title="img14"/>
+    No pictures of the repair since I just diagnosed the problem but I did get an update that the broken switch was successfully fixed by the customer.
+   </div>
+  </main>
+  <div id="disqus_thread">
+  </div>
+  <script>
+   /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ellzeyelectronics-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>
+   Please enable JavaScript to view the
+   <a href="https://disqus.com/?ref_noscript">
+    comments powered by Disqus.
+   </a>
+  </noscript>
+ </body>
+ <footer>
+  <p>
+   &copy; Copyright 2022 Jacob Ellzey
+  </p>
+ </footer>
+</html>
