@@ -131,10 +131,10 @@ def populate(name):
         #iterate through all images and make placeholders in the html
         if i>0:
             #Because I already set the first image out of the loop, I need to start from i=1.
-            #This keeps the img0 from showing up 3 times. Couldn't come up with a better way to do this
+            #This keeps the img0 from showing up 3 times. (Couldn't come up with a better way to do this)
             loadMaster()
             temp=soup.main.find_all('div')[1].img
-            temp['src']=imagesPath+ filename
+            temp['src']=imagesPath + filename
             temp['title']=Path(filename).stem
             #append is the easiest way to add content. This is why the first image is set out of the loop
             main.append(temp)
@@ -378,7 +378,7 @@ def git_push(message):
         origin.push()
         print('done')
     except:
-        print('Some error occured while pushing the code')
+        print('Some error occured while pushing to github')
         
 ###############################################
 

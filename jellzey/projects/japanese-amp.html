@@ -67,77 +67,102 @@
     Double sludge
     <img src="images\japanese-amp\img40.jpg" title="img0"/>
     Not a whole lot inside this amp so it didnt take long to trace the schematic.
-    <img src="images\japanese-amp\img37.jpg" title="img0"/>
-    The only text I could find. Google translate was not helpful.
-    <img src="images\japanese-amp\img28.jpg" title="img0"/>
-    Serial number? previous owner's DL number?
-    <img src="images\japanese-amp\img54.jpg" title="img0"/>
-    Corrosion was everywhere so I started scrubbing.
-    <img src="images\japanese-amp\img71.jpg" title="img71"/>
-    Green sludge removed
-    <img src="images\japanese-amp\img63.jpg" title="img0"/>
-    I desoldered the can cap to give it a full leakage and ESR test. To my surprise, it tested just fine at working voltage. Since I'm keeping this amp for myself, I decided to leave it in.
-    <img src="images\japanese-amp\img69.jpg" title="img0"/>
-    The cathode bypass cap tested fully open so I replaced it.
-    <img src="images\japanese-amp\img74.jpg" title="img0"/>
-    The 250k tone pot had a slight crack that was causing some strange readings
-    <img src="images\japanese-amp\img75.jpg" title="img0"/>
-    Replaced with a new one
-    <img src="images\japanese-amp\img77.jpg" title="img0"/>
-    Cleaned up the faceplate as much as I could and replaced the missing power switch
-    <img src="images\japanese-amp\img45.jpg" title="img0"/>
-    One 12AV6 tested bad
-    <img src="images\japanese-amp\img42.jpg" title="img0"/>
-    New tube and a cleaned up board
-    <img src="images\japanese-amp\img16.jpg" title="img16"/>
-    And this is where I would put my power transformer - IF I HAD ONE.
-    <img src="images\japanese-amp\img79.jpg" title="img79"/>
-    Feels like something else is missing too...
-    <img src="images\japanese-amp\img80.jpg" title="img80"/>
-    The speaker had all kinds of debris trapped against the voice coil which could be felt when moving the cone back and forth
-    <img src="images\japanese-amp\img81.jpg" title="img81"/>
-    Dust cap removed first (it didn't do a very good job anyway)
-    <img src="images\japanese-amp\img82.jpg" title="img82"/>
-    It's clear that the voice coil will need to be re-centered too. There's a huge gap on the left side.
-    <img src="images\japanese-amp\img87.jpg" title="img87"/>
-    A piece of paper cut at an angle helps to scrape out debris. With the speaker inverted, debris will fall out of the gap after the paper knocks it loose.
-    <img src="images\japanese-amp\img88.jpg" title="img88"/>
-    Plastic shims are made from transparancy sheets.
-    <img src="images\japanese-amp\img89.jpg" title="img89"/>
-    With the shims in place, the whole cone and baffle are sprayed evenly with water to relax the fibers
-    <img src="images\japanese-amp\img90.jpg" title="img90"/>
-    Book binding PVA is applied to dope the surround and strengthen weak spots. It also helps to set the cones new shape aroud the voice coil shims.
-    <img src="images\japanese-amp\img92.jpg" title="img92"/>
-    Once dried, the shims are removed and the speaker is actuated manually to ensure no voice coil rub
-    <img src="images\japanese-amp\img93.jpg" title="img93"/>
-    A new felt dustcap is glued on with more PVA
-    <img src="images\japanese-amp\img94.jpg" title="img94"/>
-    A trip to the hardware store later and I have all the missing screws to reassemble the amp
-    <img src="images\japanese-amp\img95.jpg" title="img95"/>
-    Not sure how the handle used to attach. This plastic snap is the only clue left
-    <img src="images\japanese-amp\img97.jpg" title="img97"/>
-    This is what I came up with
-    <img src="images\japanese-amp\img99.jpg" title="img99"/>
-    <img src="images\japanese-amp\img100.jpg" title="img100"/>
-    Not sure what this inner metal brace does either. Possibly a tube guard?
-    <img src="images\japanese-amp\img101.jpg" title="img101"/>
-    On to the baffle
-    <img src="images\japanese-amp\img102.jpg" title="img102"/>
-    Test fit looking good
-    <img src="images\japanese-amp\img103.jpg" title="img103"/>
-    Compass shenanigans
-    <img src="images\japanese-amp\img106.jpg" title="img106"/>
-    Used some scrap compressed cardboard material for the frame
-    <img src="images\japanese-amp\img107.jpg" title="img107"/>
-    Matte black for an even look under grill cloth
-    <img src="images\japanese-amp\img108.jpg" title="img108"/>
-    My first grill cloth job using some scrap given to me by another customer. It definitely could have been tighter and I might end up re-doing it when I put a transformer in this thing down the road.
-    <img src="images\japanese-amp\img109.jpg" title="img109"/>
-    Installed in the cabinet
-    <img src="images\japanese-amp\img0.jpg" title="img0"/>
-    And that's it for now. I'm planning on revisiting this one at some point down the line for safety upgrades and to fix my grill cloth job. Until then I can just plug it in to an isolation transformer when I want to play it.
-    <img src="images\japanese-amp\img1.jpg" title="img1"/>
-    How does it sound? Not great! but it works and check out the size of that handle!
+    <img src="images\japanese-amp\schem.png" title="schematic"/>
+    The parts count is about as low as possible and the design is similar to American 'widowmaker' amps of the same era.
+    <ul>
+     <li>
+      Starting at the inputs, there is a -6dB attenuation for anything plugged into this amp right off the bat. This isn't out of the ordinary for series-filament amps though and the infamous Kay 703 has a very similar input section.
+     </li>
+     <li>
+      The first 12AV6 is grid current biased. Both 12AV6 tubes have their unused diodes connected to the cathode.
+     </li>
+     <li>
+      The tone control is a simple variable low pass. The choice of 250k seems low, especially in parallel with the volume pot of the same value. The volume control is just a variable resistance to ground and relies on the output impedance of the previous stage to form the series half of the voltage divider. I'm not sure what the advantage of this configuration is. I guess it was worth it to eliminate another wire to the other side of the pot.
+     </li>
+     <li>
+      What follows V2 is a standard single ended power amp using the 50C5. The capacitor C6 improves stability by dampening oscillations
+     </li>
+     <li>
+      In keeping with the tradition of widowmaker amplifier design, this circuit insists that a single 50k resistor is plenty to keep mains voltage off your guitar strings.
+     </li>
+     <li>
+      This means that, even if the non-polarized plug is oriented with neutral to ground, There will be a drop across R12, leading to a potential difference to earth/neutral. In the 50% of times that the plug is oriented the other way, the voltage will be much higher. This is why it's not safe to use this amp without an isolation transformer
+     </li>
+     <li>
+      The 35W4 is a rectifier designed for series filament radios and ill-concieved guitar amps like this one. The heater has a 6V tap to allow a panel lamp like a #47 to be used since there is no heater supply and the lamp does not draw enough current to go in parallel with the heater string.
+     </li>
+     <img src="images\japanese-amp\img37.jpg" title="img0"/>
+     Tried to find any info on this amp but this was the only text inside the cabinet. Google translate was not helpful.
+     <img src="images\japanese-amp\img28.jpg" title="img0"/>
+     Serial number? previous owner's DL number?
+     <img src="images\japanese-amp\img54.jpg" title="img0"/>
+     Corrosion was everywhere so I started scrubbing.
+     <img src="images\japanese-amp\img71.jpg" title="img71"/>
+     Green sludge removed
+     <img src="images\japanese-amp\img63.jpg" title="img0"/>
+     I desoldered the can cap to give it a full leakage and ESR test. To my surprise, it tested just fine at working voltage. Since I'm keeping this amp for myself, I decided to leave it in.
+     <img src="images\japanese-amp\img69.jpg" title="img0"/>
+     The cathode bypass cap tested fully open so I replaced it.
+     <img src="images\japanese-amp\img74.jpg" title="img0"/>
+     The 250k tone pot had a slight crack that was causing some strange readings
+     <img src="images\japanese-amp\img75.jpg" title="img0"/>
+     Replaced with a new one
+     <img src="images\japanese-amp\img77.jpg" title="img0"/>
+     Cleaned up the faceplate as much as I could and replaced the missing power switch
+     <img src="images\japanese-amp\img45.jpg" title="img0"/>
+     One 12AV6 tested bad
+     <img src="images\japanese-amp\img42.jpg" title="img0"/>
+     New tube and a cleaned up board
+     <img src="images\japanese-amp\img16.jpg" title="img16"/>
+     And this is where I would put my power transformer - IF I HAD ONE.
+     <img src="images\japanese-amp\img79.jpg" title="img79"/>
+     Feels like something else is missing too...
+     <img src="images\japanese-amp\img80.jpg" title="img80"/>
+     The speaker had all kinds of debris trapped against the voice coil which could be felt when moving the cone back and forth
+     <img src="images\japanese-amp\img81.jpg" title="img81"/>
+     Dust cap removed first (it didn't do a very good job anyway)
+     <img src="images\japanese-amp\img82.jpg" title="img82"/>
+     It's clear that the voice coil will need to be re-centered too. There's a huge gap on the left side.
+     <img src="images\japanese-amp\img87.jpg" title="img87"/>
+     A piece of paper cut at an angle helps to scrape out debris. With the speaker inverted, debris will fall out of the gap after the paper knocks it loose.
+     <img src="images\japanese-amp\img88.jpg" title="img88"/>
+     Plastic shims are made from transparancy sheets.
+     <img src="images\japanese-amp\img89.jpg" title="img89"/>
+     With the shims in place, the whole cone and baffle are sprayed evenly with water to relax the fibers
+     <img src="images\japanese-amp\img90.jpg" title="img90"/>
+     Book binding PVA is applied to dope the surround and strengthen weak spots. It also helps to set the cones new shape aroud the voice coil shims.
+     <img src="images\japanese-amp\img92.jpg" title="img92"/>
+     Once dried, the shims are removed and the speaker is actuated manually to ensure no voice coil rub
+     <img src="images\japanese-amp\img93.jpg" title="img93"/>
+     A new felt dustcap is glued on with more PVA
+     <img src="images\japanese-amp\img94.jpg" title="img94"/>
+     A trip to the hardware store later and I have all the missing screws to reassemble the amp
+     <img src="images\japanese-amp\img95.jpg" title="img95"/>
+     Not sure how the handle used to attach. This plastic snap is the only clue left
+     <img src="images\japanese-amp\img97.jpg" title="img97"/>
+     This is what I came up with
+     <img src="images\japanese-amp\img99.jpg" title="img99"/>
+     <img src="images\japanese-amp\img100.jpg" title="img100"/>
+     Not sure what this inner metal brace does either. Possibly a tube guard?
+     <img src="images\japanese-amp\img101.jpg" title="img101"/>
+     On to the baffle
+     <img src="images\japanese-amp\img102.jpg" title="img102"/>
+     Test fit looking good
+     <img src="images\japanese-amp\img103.jpg" title="img103"/>
+     Compass shenanigans
+     <img src="images\japanese-amp\img106.jpg" title="img106"/>
+     Used some scrap compressed cardboard material for the frame
+     <img src="images\japanese-amp\img107.jpg" title="img107"/>
+     Matte black for an even look under grill cloth
+     <img src="images\japanese-amp\img108.jpg" title="img108"/>
+     My first grill cloth job using some scrap given to me by another customer. It definitely could have been tighter and I might end up re-doing it when I put a transformer in this thing down the road.
+     <img src="images\japanese-amp\img109.jpg" title="img109"/>
+     Installed in the cabinet
+     <img src="images\japanese-amp\img0.jpg" title="img0"/>
+     And that's it for now. I'm planning on revisiting this one at some point down the line for safety upgrades and to fix my grill cloth job. Until then I can just plug it in to an isolation transformer when I want to play it.
+     <img src="images\japanese-amp\img1.jpg" title="img1"/>
+     How does it sound? Not great! but it works and check out the size of that handle!
+    </ul>
    </div>
   </main>
   <div id="disqus_thread">
