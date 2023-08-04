@@ -6,7 +6,7 @@
   <meta charset="utf-8"/>
   <meta content="J. Ellzey" name="author"/>
   <title>
-   G2
+   Duplicating a Maestro G-2
   </title>
   <link href="..\favicon_12_10_19.png" id="local" rel="shortcut icon" type="image/x-icon"/>
  </head>
@@ -42,78 +42,87 @@
   </nav>
   <main>
    <h1 class="center-text">
-    G2
+    Duplicating a Maestro G-2
    </h1>
+   <br/>
+   <center>
+    <a href="G2-files.html">
+     [Download Schematics Here]
+    </a>
+    <br/>
+    <br/>
+   </center>
    <div class="intro">
-    <img class="frame2" src="images\G2\img0.jpg" title="intro image"/>
+    <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="frame1" frameborder="0" src="https://www.youtube.com/embed/joa5IhEYT2U">
+    </iframe>
     <p id="intro-text">
-     INTRO Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+     Introduced by Maestro in 1968, the G-2 was one of the first ever multi-effects units for guitar but there isn't much info to be found on the web about it other than some blurry schematics and a partial service manual. The same goes for its simpler predecessor, the G-1. I was lucky enough to have one brought to me for repairs and as soon as I heard it, I was determined to find out exactly what was going on inside. A deal was made with the owner that I would fix it free of charge in exchange for some extra time to try and duplicate it.
+     <br/>
+     &nbsp; &nbsp; &nbsp; &nbsp; What struck me first about the G-2 was the 'String Bass' setting. I had played through octave pedals before, but never heard one that tracked the guitar so well and sounded so musical.
+     <br/>
+     &nbsp; &nbsp; &nbsp; &nbsp; In addition to the bass, the fuzz on the G-2 is now my personal favorite iteration of the Maestro fuzz tone. It's a hybrid silicon-germanium circuit that stays true to Glenn Snoddy's original while utilizing silicon transistors and a couple extra filter stages to get rid of the sputtering, instability and 'fartyness' that the FZ-1 and FZ-1A had. It sounds just as aggressive but feels more focused.
+     <br/>
+     &nbsp; &nbsp; &nbsp; &nbsp; The auto-wah (labeled 'Wow-Wow' on the faceplate) is the same circuit as the Maestro Bomerang (heard in Isaac Hayes'
+     <i>
+      Theme from Shaft
+     </i>
+     ) but with an optically coupled trigger and adjustable envelope length. This allows every note you play to sound shagadellic and eliminates the sore ankle that would usually accompany such a tone. The "Wow-Wow" circuit is also used by the "Color Tone" settings to add a resonant peak to the signal. It's capable of giving a hefty midrange or treble boost that can really cut through a mix and overdrive an amp.
+     <br/>
+     &nbsp; &nbsp; &nbsp; &nbsp; The percussion section uses discrete transistor oscillators, RLC circuits, and a noise generator to synthesize four different percussion sounds (bongo, tambourine, brush, and clave) that can be triggered when a note is picked. The same circuits appear in Maestro's monarch-themed rhythm machines (Rhythm King, Queen, and Jester) that were used by Sly Stone, Bob Marley, and Kraftwerk among others.
+     <br/>
+     &nbsp; &nbsp; &nbsp; &nbsp; There is also a pretty cool effect that is labelled "Echo" on the faceplate. Like a tremolo effect, it's a periodic amplitude modulator. Unlike tremolo, the modulation envelope includes an attack transient that kind of mimics a picked string. The overall effect makes a sustained note sound like many repeated, shorter notes. The oscillator resets everytime a note is picked so the attack of a picked note is never lost as it sometimes is with a tremolo effect. With the right settings you can
+     <i>
+      almost
+     </i>
+     get something similar to a slapback.
     </p>
    </div>
    <div class="main-content">
-    <img src="images\G2\img0.jpg" title="img0"/>
-    CAPTION Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
     <img src="images\G2\img1.jpg" title="img1"/>
-    <img src="images\G2\img10.jpg" title="img10"/>
-    <img src="images\G2\img11.jpg" title="img11"/>
-    <img src="images\G2\img12.jpg" title="img12"/>
-    <img src="images\G2\img13.jpg" title="img13"/>
-    <img src="images\G2\img14.jpg" title="img14"/>
-    <img src="images\G2\img15.jpg" title="img15"/>
-    <img src="images\G2\img16.jpg" title="img16"/>
-    <img src="images\G2\img17.jpg" title="img17"/>
-    <img src="images\G2\img18.jpg" title="img18"/>
-    <img src="images\G2\img19.jpg" title="img19"/>
-    <img src="images\G2\img2.jpg" title="img2"/>
-    <img src="images\G2\img20.jpg" title="img20"/>
-    <img src="images\G2\img21.jpg" title="img21"/>
-    <img src="images\G2\img22.jpg" title="img22"/>
-    <img src="images\G2\img23.jpg" title="img23"/>
-    <img src="images\G2\img24.jpg" title="img24"/>
-    <img src="images\G2\img25.jpg" title="img25"/>
-    <img src="images\G2\img26.jpg" title="img26"/>
-    <img src="images\G2\img27.jpg" title="img27"/>
-    <img src="images\G2\img28.jpg" title="img28"/>
-    <img src="images\G2\img29.jpg" title="img29"/>
+    After some disassembly, I was able to fold out The PCB and secure it to the sub-chassis to get a closer look. Apart from a replacement potentiometer, it looked untouched.
+    <img src="images\G2\img0.jpg" title="img0"/>
+    Using the original schematic as a guide, I got to work tracing out each part of the unit in clusters and noted part values and discrepancies as I went along. There were a surprisingly large ammount of differences between the schematic and the PCB which made me consider the possibility that the errors were included intentionally to discourage copycats while giving repair techs enough of the picture to fix things. I've noticed a similar pattern of errors in other Maestro schematics of this era too.
     <img src="images\G2\img3.jpg" title="img3"/>
-    <img src="images\G2\img30.jpg" title="img30"/>
-    <img src="images\G2\img31.jpg" title="img31"/>
-    <img src="images\G2\img32.jpg" title="img32"/>
-    <img src="images\G2\img33.jpg" title="img33"/>
-    <img src="images\G2\img34.jpg" title="img34"/>
-    <img src="images\G2\img35.jpg" title="img35"/>
-    <img src="images\G2\img36.jpg" title="img36"/>
-    <img src="images\G2\img37.jpg" title="img37"/>
-    <img src="images\G2\img38.jpg" title="img38"/>
-    <img src="images\G2\img39.jpg" title="img39"/>
-    <img src="images\G2\img4.jpg" title="img4"/>
-    <img src="images\G2\img40.jpg" title="img40"/>
-    <img src="images\G2\img41.jpg" title="img41"/>
-    <img src="images\G2\img42.jpg" title="img42"/>
-    <img src="images\G2\img43.jpg" title="img43"/>
-    <img src="images\G2\img44.jpg" title="img44"/>
-    <img src="images\G2\img45.jpg" title="img45"/>
-    <img src="images\G2\img46.jpg" title="img46"/>
-    <img src="images\G2\img47.jpg" title="img47"/>
-    <img src="images\G2\img48.jpg" title="img48"/>
-    <img src="images\G2\img49.jpg" title="img49"/>
-    <img src="images\G2\img5.jpg" title="img5"/>
-    <img src="images\G2\img50.jpg" title="img50"/>
-    <img src="images\G2\img51.jpg" title="img51"/>
-    <img src="images\G2\img52.jpg" title="img52"/>
-    <img src="images\G2\img53.jpg" title="img53"/>
-    <img src="images\G2\img54.jpg" title="img54"/>
-    <img src="images\G2\img55.jpg" title="img55"/>
-    <img src="images\G2\img56.jpg" title="img56"/>
-    <img src="images\G2\img57.jpg" title="img57"/>
-    <img src="images\G2\img58.jpg" title="img58"/>
-    <img src="images\G2\img59.jpg" title="img59"/>
-    <img src="images\G2\img6.jpg" title="img6"/>
-    <img src="images\G2\img7.jpg" title="img7"/>
-    <img src="images\G2\img8.jpg" title="img8"/>
+    By pointing a lamp at the copper foil side of the board, I was able to see the traces and the components at the same time.
+    <img src="images\G2\img14.jpg" title="img14"/>
+    One of the percussion torroids and a couple other components were located on this auxilliary board far away from the transformer
     <img src="images\G2\img9.jpg" title="img9"/>
+    The power supply is a common linear supply with a zener-referenced transistor regulator that feeds the main rails on the PCB. Local filter stages on the board drop the supply down and decouple the different parts of the circuit.
+    <img src="images\G2\img29.jpg" title="img29"/>
+    Since all of the transistors were labeled with internal part numbers, I ended up using this component tester a lot.
+    <img src="images\G2\img21.jpg" title="img21"/>
+    Once I had the schematic traced, I made the power supply, bass, and fuzz circuits along with input and output amplifiers. The bass still didn't sound quite right though. I couldnt trace out the whole bass circuit because part of it was entombed in a printed circuit package...
+    <img src="images\G2\img30.jpg" title="img30"/>
+    Sometimes called 'bulplates' and almost always made by Sprague, these resin covered packages contain various RC networks and helped to save time during assembly by combining multiple parts into one. After scowering Sprague catalogs from the time looking for a match, I eventually came to the conclusion that these were likely custom made for Maestro. There are values for the internal parts printed on the schematic but they are definitely not accurate. To figure out what was inside, I built a second network on a breadboard and measured corresponding nodes with an ohmeter and LCR meter. After some trial and error tweaking the circuit and measuring again, I finally had a circuit that measured exactly like the original.
+    <img src="images\G2\img31.jpg" title="img31"/>
+    At this point, I was pretty sure I had cracked the code. I was getting tired of the perf-board so I used the CNC to route a PCB with the new values on it and wired it into the prototype bass board.
+    <img src="images\G2\img33.jpg" title="img33"/>
+    AND IT WORKED! It sounded just like the real thing so I moved on to the rest of the modules.
+    <img src="images\G2\img38.jpg" title="img38"/>
+    After a couple more modules were done, I made an
+    <a href="AB-Box.html">
+     auto-switching A/B box
+    </a>
+    to compare the original to the copies while playing guitar. This helped me iron out a few more kinks and try again.
+    <img src="images\G2\img46.jpg" title="img46"/>
+    Finally I reached a point where I had every module completed and I recorded the final demo video that's at the top of this page.
+    <img src="images\G2\img47.jpg" title="img47"/>
+    I learned a ton from this project, way more than can fit in a single entry, so I plan on breaking this circuit down into individual effects and discussing each one separately. For those interested, you can follow
+    <a href="G2-files.html">
+     this link to find the supplementary files from this project including the original and the updated schematic.
+    </a>
    </div>
   </main>
+  <div id="donate">
+   <center>
+    If you found this page useful, consider a donation
+    <form action="https://www.paypal.com/donate" method="post" target="_top">
+     <input name="hosted_button_id" type="hidden" value="M58HTK3SAF66Y"/>
+     <input alt="Donate with PayPal button" border="0" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" title="PayPal - The safer, easier way to pay online!" type="image"/>
+     <img alt="" border="0" height="1" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1"/>
+    </form>
+   </center>
+  </div>
   <div id="disqus_thread">
   </div>
   <script>
@@ -142,7 +151,7 @@
  </body>
  <footer>
   <p>
-   &copy; Copyright 2022 Jacob Ellzey
+   &copy; Copyright 2023 Jacob Ellzey
   </p>
  </footer>
 </html>
