@@ -24,18 +24,21 @@
      </a>
     </li> -->
     <li>
+     <a href="..\..\index.html" id="local">
+      Home
+     </a>
+    </li>
+    <li>
      <a href="..\contact.html" id="local">
       Contact
      </a>
     </li>
+    <a href="..\about.html" id="local">
+     About
+    </a>
     <li>
      <a href="..\resources\resources.html" id="local">
       Resources
-     </a>
-    </li>
-    <li>
-     <a href="..\about.html" id="local">
-      About
      </a>
     </li>
    </ul>
@@ -53,20 +56,22 @@
     <br/>
    </center>
    <div class="intro">
-    <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="frame1" frameborder="0" src="https://www.youtube.com/embed/joa5IhEYT2U">
-    </iframe>
+    <div class="container">
+     <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="responsive-iframe" frameborder="0" src="https://www.youtube.com/embed/joa5IhEYT2U">
+     </iframe>
+    </div>
     <p id="intro-text">
-     Introduced by Maestro in 1968, the G-2 was one of the first ever multi-effects units for guitar but there isn't much info to be found on the web about it other than some blurry schematics and a partial service manual. The same goes for its simpler predecessor, the G-1. I was lucky enough to have one brought to me for repairs and as soon as I heard it, I was determined to find out exactly what was going on inside so I offered to fix it free of charge in exchange for some extra time to try and duplicate it.
+     Introduced by Maestro in 1968, the G-2 was one of the first ever multi-effects units for guitar but there isn't much info to be found on the web about it other than some blurry schematics and a partial service manual. It's the same story for the G-1, its simpler predecessor. I was lucky enough to have one brought to me for repairs and as soon as I heard it, I was determined to find out exactly what was going on inside so I offered to fix it free of charge in exchange for some extra time to try and duplicate it.
      <br/>
      &nbsp; &nbsp; &nbsp; &nbsp; What struck me first about the G-2 was the 'String Bass' setting. I had played through octave pedals before, but never heard one that tracked the guitar so well and sounded so musical.
      <br/>
      &nbsp; &nbsp; &nbsp; &nbsp; In addition to the bass, the fuzz on the G-2 is now my personal favorite iteration of the Maestro fuzz tone. It's a hybrid silicon-germanium circuit that stays true to Glenn Snoddy's original while utilizing silicon transistors and a couple extra filter stages to get rid of the sputtering, instability and 'fartyness' that the FZ-1 and FZ-1A had. It sounds just as aggressive but feels more focused.
      <br/>
-     &nbsp; &nbsp; &nbsp; &nbsp; The auto-wah (labeled 'Wow-Wow' on the faceplate) is the same circuit as the Maestro Bomerang (heard in Isaac Hayes'
+     &nbsp; &nbsp; &nbsp; &nbsp; The auto-wah, labeled 'Wow-Wow' on the faceplate, is almost the same circuit as the Maestro Bomerang which can be heard on Isaac Hayes'
      <i>
       Theme from Shaft
      </i>
-     ) but with an optically coupled trigger and adjustable envelope length. This allows every note you play to sound shagadellic and eliminates the sore ankle that would usually accompany such a tone. The "Wow-Wow" circuit is also used by the "Color Tone" settings to add a resonant peak to the signal. It's capable of giving a hefty midrange or treble boost that can really cut through a mix and overdrive an amp.
+     The difference is that the G-2 circuit has an optically coupled trigger and adjustable envelope length instead of a foot control. This allows every note you play to sound shagadellic and eliminates the sore ankle that would usually accompany such a tone. The "Wow-Wow" circuit is also used by the "Color Tone" settings to add a resonant peak to the signal. It's capable of giving a hefty midrange or treble boost that can really cut through a mix and overdrive an amp.
      <br/>
      &nbsp; &nbsp; &nbsp; &nbsp; The percussion section uses discrete transistor oscillators, RLC circuits, and a noise generator to synthesize four different percussion sounds (bongo, tambourine, brush, and clave) that can be triggered when a note is picked. The same circuits appear in Maestro's monarch-themed rhythm machines (Rhythm King, Queen, and Jester) that were used by Sly Stone, Bob Marley, and Kraftwerk among others.
      <br/>
@@ -93,7 +98,7 @@
     <img src="images\G2\img21.jpg" title="img21"/>
     Once I had the schematic traced, I made the power supply, bass, and fuzz circuits along with input and output amplifiers. The bass still didn't sound quite right though. I couldnt trace out the whole bass circuit because part of it was entombed in a printed circuit package...
     <img src="images\G2\img30.jpg" title="img30"/>
-    Sometimes called 'bulplates' and almost always made by Sprague, these resin covered packages contain various RC networks and helped to save time during assembly by combining multiple parts into one. After scowering Sprague catalogs from the time looking for a match, I eventually came to the conclusion that these were likely custom made for Maestro. There are values for the internal parts printed on the schematic but they are definitely not accurate. To figure out what was inside, I built a second network on a breadboard and measured corresponding nodes with an ohmeter and LCR meter. After some trial and error tweaking the circuit and measuring again, I finally had a circuit that measured exactly like the original.
+    Sometimes called 'bulplates' and almost always made by Sprague, these resin covered packages contain various RC networks and are designed to save time during assembly by combining multiple parts into one. After scowering Sprague catalogs from the time looking for a match, I eventually came to the conclusion that these were likely custom made for Maestro. There are values for the internal parts printed on the schematic but they are definitely not accurate. To figure out what was inside, I built a second network on a breadboard and measured corresponding nodes with an ohmeter and LCR meter. After some trial and error tweaking the circuit and measuring again, I finally had a circuit that measured exactly like the original.
     <img src="images\G2\img31.jpg" title="img31"/>
     At this point, I was pretty sure I had cracked the code. I was getting tired of the perf-board so I used the CNC to route a PCB with the new values on it and wired it into the prototype bass board.
     <img src="images\G2\img33.jpg" title="img33"/>
@@ -103,7 +108,7 @@
     <a href="AB-Box.html">
      auto-switching A/B box
     </a>
-    to compare the original to the copies while playing guitar. This helped me iron out a few more kinks and try again.
+    to more easily compare the original to the copies while playing guitar. This helped me iron out a few more kinks.
     <img src="images\G2\img46.jpg" title="img46"/>
     Finally I reached a point where I had every module completed and I recorded the final demo video that's at the top of this page.
     <img src="images\G2\img47.jpg" title="img47"/>
@@ -117,10 +122,10 @@
   <br/>
   <div id="donate">
    <center>
-    If you found this page useful, consider a donation
+    If you find this site useful, consider a donation
     <form action="https://www.paypal.com/donate" method="post" target="_top">
      <input name="hosted_button_id" type="hidden" value="M58HTK3SAF66Y"/>
-     <input alt="Donate with PayPal button" border="0" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" title="PayPal - The safer, easier way to pay online!" type="image"/>
+     <input alt="Donate with PayPal" border="0" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" title="PayPal -The safer, easier way to pay online!" type="image"/>
      <img alt="" border="0" height="1" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1"/>
     </form>
    </center>

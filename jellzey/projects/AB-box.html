@@ -24,18 +24,21 @@
      </a>
     </li> -->
     <li>
+     <a href="..\..\index.html" id="local">
+      Home
+     </a>
+    </li>
+    <li>
      <a href="..\contact.html" id="local">
       Contact
      </a>
     </li>
+    <a href="..\about.html" id="local">
+     About
+    </a>
     <li>
      <a href="..\resources\resources.html" id="local">
       Resources
-     </a>
-    </li>
-    <li>
-     <a href="..\about.html" id="local">
-      About
      </a>
     </li>
    </ul>
@@ -44,46 +47,57 @@
    <h1 class="center-text">
     Auto A/B Box
    </h1>
-   <div class="intro">
-    <img class="frame2" src="images\AB-box\Demo.gif" title="intro image"/>
-    <p id="intro-text">
-     Comparing two pieces of gear with the same input signal is something I end up doing a lot. With music equipment, hearing the circuits in action can sometimes reveal more than seeing the output on a scope. Differences can be subtle and any dead time during the switch can cause your brain to misremember or otherwise trick itself into hearing one thing or another. There's also personal bias to make things more complicated. Working on the
-     <a href="G2.html">
-      G-2 Project
+   <br/>
+   <center>
+    <a href="files/AB-box/CAMOutputs.zip">
+     [Download Gerber Files Here]
+    </a>
+    <br/>
+    <br/>
+    <div class="intro">
+     <img class="frame2" src="images\AB-box\Demo.gif" title="intro image"/>
+     <p id="intro-text">
+      Comparing two pieces of gear with the same input signal is something I end up doing a lot. With music equipment, hearing the circuits in action can sometimes reveal more than seeing the output on a scope. Differences can be subtle and any dead time during the switch can cause your brain to misremember or otherwise trick itself into hearing one thing or another. There's also personal bias to make things more complicated. Working on the
+      <a href="G2.html">
+       G-2 Project
+      </a>
+      gave me a reason to build something that would automate signal switching to eliminate these problems. What I ended up with is an AB box that can switch an input and output between two circuits at a variable rate. It also has manual switching options and a bypass switch for sanity checks. It runs on 9V and has three, parallel, pedal-compatible barrel jacks to provide power to the connected devices. Dead time is eliminated and with the indicators covered, there's no way of knowing which circuit is selected so listening tests can be more objective.
+     </p>
+    </div>
+    <div class="main-content">
+     <img src="images\AB-box\schem.png" title="Schematic"/>
+     After some breadboarding, I ended up with this schematic that I made in EAGLE [RIP]. It's an astable multivibrator using a 555 timer and a pot to vary the speed. The duty cycle isn't exactly 50% but it's close enough for this application. T1 drives the relay when the 555 output is high. Since the current through the relay is just about 18mA which is under the max current for an LED, I put the indicator LED in series with the coil. The 33 ohm resistor adds another voltage drop keep the relay coil at its rated voltage. T2 also conducts when the output is high and shunts current around LED1 to turn it off.
+     <img src="images\AB-box\img2.jpg" title="img2"/>
+     I used a 3018 CNC to route the traces and drill the single sided copper clad board. I don't know what I would do without one of these machines. Fab houses are fast but this little CNC cranked this board out in 15 minutes. (.8mm endmill for routing, drilling, and cutout and FlatCam to generate the gcode)
+     <img src="images\AB-box\img4.jpg" title="img4"/>
+     All tinned up. Used solder wick is great for tinning homemade boards if you aren't put-off by the idea of someone else's solder.
+     <img src="images\AB-box\img5.jpg" title="img5"/>
+     Components installed
+     <img src="images\AB-box\img6.jpg" title="img6"/>
+     <img src="images\AB-box\img24.jpg" title="img24"/>
+     My relay footprint was incorrect on that board so I made a new one and wired it up in an old enclosure that was already full of holes
+     <img src="images\AB-box\img22.jpg" title="img22"/>
+     I used shielded cable for all the sensitive signals and made sure to leave enough wire length to allow the enclosure to hinge open in the future.
+     <img src="images\AB-box\img16.jpg" title="img16"/>
+     After labeling the controls and jacks
+     <img src="images\AB-box\img19.jpg" title="img19"/>
+     For the first test I used the box to compare an FZ-1A clone to an FZ-1 clone with good results.
+     <img src="images\AB-box\img15.jpg" title="img15"/>
+     I can think of so many uses for this thing. In the future, I plan to make some improvements like isolated jacks to reduce ground loops and switchable buffers to deal with sensitive pedals but for now, I'm very happy with how it came out. If anyone is interested in the gerber files for this project, you can
+     <a href="files/AB-box/CAMOutputs.zip">
+      download them here.
      </a>
-     gave me a reason to build something that would automate signal switching to eliminate these problems. What I ended up with is an AB box that can switch an input and output between two circuits at a variable rate. It also has manual switching options and a bypass switch for sanity checks. It runs on 9V and has three, parallel, pedal-compatible barrel jacks to provide power to the connected devices. Dead time is eliminated and with the indicators covered, there's no way of knowing which circuit is selected so listening tests can be more objective.
-    </p>
-   </div>
-   <div class="main-content">
-    <img src="images\AB-box\schem.png" title="Schematic"/>
-    After some breadboarding, I ended up with this schematic that I made in EAGLE [RIP]. It's an astable multivibrator using a 555 timer and a pot to vary the speed. The duty cycle isn't exactly 50% but it's close enough for this application. T1 drives the relay when the 555 output is high. Since the current through the relay is just about 18mA which is under the max current for an LED, I put the indicator LED in series with the coil. The 33 ohm resistor adds another voltage drop keep the relay coil at its rated voltage. T2 also conducts when the output is high and shunts current around LED1 to turn it off.
-    <img src="images\AB-box\img2.jpg" title="img2"/>
-    I used a 3018 CNC to route the traces and drill the single sided copper clad board. I don't know what I lwould do without one of these machines. Fab houses are fast but this little CNC cranked this board out in 15 minutes. (.8mm endmill for routing, drilling, and cutout and FlatCam to generate the gcode)
-    <img src="images\AB-box\img4.jpg" title="img4"/>
-    All tinned up. Used solder wick is great for tinning homemade boards if you aren't put-off by the idea of someone else's solder.
-    <img src="images\AB-box\img5.jpg" title="img5"/>
-    Components installed
-    <img src="images\AB-box\img6.jpg" title="img6"/>
-    <img src="images\AB-box\img24.jpg" title="img24"/>
-    My relay footprint was incorrect on that board so I made a new one and wired it up in an old enclosure that was already full of holes
-    <img src="images\AB-box\img22.jpg" title="img22"/>
-    I used shielded cable for all the sensitive signals and made sure to leave enough wire length to allow the enclosure to hinge open in the future.
-    <img src="images\AB-box\img16.jpg" title="img16"/>
-    After labeling the controls and jacks
-    <img src="images\AB-box\img19.jpg" title="img19"/>
-    For the first test I used the box to compare an FZ-1A clone to an FZ-1 clone with good results.
-    <img src="images\AB-box\img15.jpg" title="img15"/>
-    I can think of so many uses for this thing. In the future, I plan to make some improvements like isolated jacks to reduce ground loops and switchable buffers to deal with sensitive pedals but for now, I'm very happy with how it came out.
-   </div>
+    </div>
+   </center>
   </main>
   <br/>
   <br/>
   <div id="donate">
    <center>
-    If you found this page useful, consider a donation
+    If you find this site useful, consider a donation
     <form action="https://www.paypal.com/donate" method="post" target="_top">
      <input name="hosted_button_id" type="hidden" value="M58HTK3SAF66Y"/>
-     <input alt="Donate with PayPal button" border="0" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" title="PayPal - The safer, easier way to pay online!" type="image"/>
+     <input alt="Donate with PayPal" border="0" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" title="PayPal -The safer, easier way to pay online!" type="image"/>
      <img alt="" border="0" height="1" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1"/>
     </form>
    </center>

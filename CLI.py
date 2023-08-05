@@ -6,7 +6,7 @@ import CML
 print("Content Manager 9000\n")
 
 while True:
-    print('Enter command (new, pub, hid, del, img, end)\n')
+    print('Enter command (new, cln, pub, hid, del, img, end)\n')
     cmd=input()
     if cmd=='new':
         print('Create a new page from image folder\n')
@@ -16,7 +16,9 @@ while True:
         print('Making '+ answer +'.html \n')
         CML.makeNew(answer)
         CML.printActivePages(CML.PROJ_PATH)
-        
+    elif cmd=='cln':
+        print('Cleaning and formatting site files\n')
+        CML.theWorks()
     elif cmd=='pub':
         print('Publish page to index\n')
         CML.printActivePages(CML.PROJ_PATH)
