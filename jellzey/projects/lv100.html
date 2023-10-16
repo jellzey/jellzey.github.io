@@ -48,30 +48,31 @@
     LV-100
    </h1>
    <div class="intro">
-    <img class="frame2" src="images\lv100\img11.jpg" title="intro image"/>
+    <img src="images\lv100\img11.jpg" title="intro image"/>
     <p id="intro-text">
      After several revisions of my
-     <a href="/lunch-reverb.html">
+     <a href="lunch-reverb.html">
       lunchbox-reverb
      </a>
-     circuit, I ended up with a PCB design that I'm very pleased with. The new lunchverb, dubbed LV-100, has a re-voiced reverb driver and recovery stage, a new tone control, an input level switch, a 9V battery connection, and it has gained the ability to drive 600 ohm tanks as well as 8 ohm via an internal impedance switch.
+     circuit, I now have a circuit and PCB design that I'm very pleased with. The new LV-100 lunchverb has a re-voiced reverb driver and recovery stage, a new tone control, an input level switch, a 9V battery connection, and it has gained the ability to drive 600 ohm tanks as well as 8 ohm via an internal impedance switch.
      <br/>
-     By taking readings from a 1967 Super Reverb, I was able to get a clearer picture of what the Fender circuit is actually doing with the tank and surprisingly, I found way more low frequencies than I expected. By recreating that response and letting more low end through the driver with more high pass filtering in the recovery stage, I was able to get exactly the springy attack sound that I was after.
+     &nbsp; &nbsp; &nbsp; &nbsp;
+     By taking readings from a 1967 Super Reverb, I was able to get a clearer picture of how the Fender circuit actually interacts with the tank and surprisingly, I found way more low frequencies than expected. By letting more low end through the driver and compensating with more high pass filtering in the recovery stage, I was able to get exactly the springy attack sound that I was after so I had some PCB's made and worked out a design for the whole assembly to make it more efficient to build multiple at a time.
     </p>
    </div>
    <div class="main-content">
     <img src="images\lv100\img5.jpg" title="img11"/>
     Here's a shot of some boards after being populated. The pots and jacks go on last to ensure a propper fit.
     <img src="images\lv100\img7.jpg" title="img7"/>
-    The whole assembly comes together as a stack wusing M4 standoffs. The spacing of the tank's mounting holes is matched by every other layer. The faceplate is another PCB with solder pads for spring connecters to lock on to the lunchbox and give a strong ground connection.
+    The whole assembly comes together as a stack using M4 standoffs. The spacing of the tank's mounting holes is matched by every other layer. The faceplate is another PCB with solder pads for spring contacts to lock on to the lunchbox and give a strong ground connection.
     <img src="images\lv100\img22.jpg" title="img22"/>
-    One of the biggest updates in this schematic is the elimination of the LM386. I found that by using a current source configuration, a much cheaper NE5532 can drive an 8 ohm tank just fine. A discrete transistor split rail buffer was added to replace the now preoccupied op-amp half. The new tone control is a basic op-amp LPF. Other than that, the design is functionally the same as the original
+    One of the biggest updates in this schematic is the elimination of the LM386. I found that by using a current source configuration, an NE5532 can drive an 8 ohm tank just fine. A discrete transistor split rail buffer was added to replace the now preoccupied op-amp half. The new tone control is an active LPF in the recovery stage. Beyond that, the design is functionally the same as the original lunch-verb.
     <img src="images\lv100\img21.jpg" title="img21"/>
-    A batch all ready to be housed in their lunchboxes.
+    The first batch all ready to be housed in their lunchboxes.
     <img src="images\lv100\img12.jpg" title="img12"/>
-    If theres any interest in PCB's, you can
-    <a href="C:\Users\jellz\Desktop\PythonCMS-Local\jellzey.github.io\jellzey\contact.html">
-     send me a message
+    ...and if you want to own one, you can
+    <a href="https://reverb.com/item/73925007-lv-100-lunchbox-spring-reverb">
+     buy one here!
     </a>
     <!-- <img src="images\lv100\img1.jpg" title="img1"/>
     <img src="images\lv100\img10.jpg" title="img10"/>
