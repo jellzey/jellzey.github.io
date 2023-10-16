@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <link href="..\styles\style.css" id="local" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Playfair+Display|Roboto" rel="stylesheet" type="text/css"/>
+  <meta charset="utf-8"/>
+  <meta content="J. Ellzey" name="author"/>
+  <title>
+   Lv100
+  </title>
+  <link href="..\favicon_12_10_19.png" id="local" rel="shortcut icon" type="image/x-icon"/>
+ </head>
+ <body>
+  <header>
+   <a href="..\..\index.html" id="local">
+    <img alt="Ellzey Electronics" id="local" src="..\header.jpg"/>
+   </a>
+  </header>
+  <nav id="access">
+   <ul>
+    <!-- <li>
+     <a href="https://ellzeyelectronics.myshopify.com/">
+      Store
+     </a>
+    </li> -->
+    <li>
+     <a href="..\..\index.html" id="local">
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="..\contact.html" id="local">
+      Contact
+     </a>
+    </li>
+    <a href="..\about.html" id="local">
+     About
+    </a>
+    <li>
+     <a href="..\resources\resources.html" id="local">
+      Resources
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <main>
+   <h1 class="center-text">
+    LV-100
+   </h1>
+   <div class="intro">
+    <img class="frame2" src="images\lv100\img11.jpg" title="intro image"/>
+    <p id="intro-text">
+     After several revisions of my
+     <a href="/lunch-reverb.html">
+      lunchbox-reverb
+     </a>
+     circuit, I ended up with a PCB design that I'm very pleased with. The new lunchverb, dubbed LV-100, has a re-voiced reverb driver and recovery stage, a new tone control, an input level switch, a 9V battery connection, and it has gained the ability to drive 600 ohm tanks as well as 8 ohm via an internal impedance switch.
+     <br/>
+     By taking readings from a 1967 Super Reverb, I was able to get a clearer picture of what the Fender circuit is actually doing with the tank and surprisingly, I found way more low frequencies than I expected. By recreating that response and letting more low end through the driver with more high pass filtering in the recovery stage, I was able to get exactly the springy attack sound that I was after.
+    </p>
+   </div>
+   <div class="main-content">
+    <img src="images\lv100\img5.jpg" title="img11"/>
+    Here's a shot of some boards after being populated. The pots and jacks go on last to ensure a propper fit.
+    <img src="images\lv100\img7.jpg" title="img7"/>
+    The whole assembly comes together as a stack wusing M4 standoffs. The spacing of the tank's mounting holes is matched by every other layer. The faceplate is another PCB with solder pads for spring connecters to lock on to the lunchbox and give a strong ground connection.
+    <img src="images\lv100\img22.jpg" title="img22"/>
+    One of the biggest updates in this schematic is the elimination of the LM386. I found that by using a current source configuration, a much cheaper NE5532 can drive an 8 ohm tank just fine. A discrete transistor split rail buffer was added to replace the now preoccupied op-amp half. The new tone control is a basic op-amp LPF. Other than that, the design is functionally the same as the original
+    <img src="images\lv100\img21.jpg" title="img21"/>
+    A batch all ready to be housed in their lunchboxes.
+    <img src="images\lv100\img12.jpg" title="img12"/>
+    If theres any interest in PCB's, you can
+    <a href="C:\Users\jellz\Desktop\PythonCMS-Local\jellzey.github.io\jellzey\contact.html">
+     send me a message
+    </a>
+    <!-- <img src="images\lv100\img1.jpg" title="img1"/>
+    <img src="images\lv100\img10.jpg" title="img10"/>
+    <img src="images\lv100\img0.jpg" title="img0"/>
+    
+    <img src="images\lv100\img13.jpg" title="img13"/>
+    <img src="images\lv100\img14.jpg" title="img14"/>
+    <img src="images\lv100\img15.jpg" title="img15"/>
+    <img src="images\lv100\img16.jpg" title="img16"/>
+    <img src="images\lv100\img17.jpg" title="img17"/>
+    <img src="images\lv100\img18.jpg" title="img18"/>
+    <img src="images\lv100\img19.jpg" title="img19"/>
+    <img src="images\lv100\img2.jpg" title="img2"/>
+    <img src="images\lv100\img20.jpg" title="img20"/>
+    
+    <img src="images\lv100\img22.jpg" title="img22"/>
+    <img src="images\lv100\img3.jpg" title="img3"/>
+    <img src="images\lv100\img4.jpg" title="img4"/>
+    <img src="images\lv100\img5.jpg" title="img5"/>
+    <img src="images\lv100\img6.jpg" title="img6"/>
+    
+    <img src="images\lv100\img8.jpg" title="img8"/>
+    <img src="images\lv100\img9.jpg" title="img9"/> -->
+   </div>
+  </main>
+  <br/>
+  <br/>
+  <!-- <div id="donate">
+      <center>
+      If you find this site useful, consider a donation
+      <form action="https://www.paypal.com/donate" method="post" target="_top">
+       <input name="hosted_button_id" type="hidden" value="M58HTK3SAF66Y"/>
+       <input alt="Donate with PayPal" border="0" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" title="PayPal -The safer, easier way to pay online!" type="image"/>
+       <img alt="" border="0" height="1" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1"/>
+      </form>
+      </center>
+   </div> -->
+  <div id="disqus_thread">
+  </div>
+  <script>
+   /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ellzeyelectronics-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>
+   Please enable JavaScript to view the
+   <a href="https://disqus.com/?ref_noscript">
+    comments powered by Disqus.
+   </a>
+  </noscript>
+ </body>
+ <footer>
+  <p>
+   &copy; Copyright 2023 Jacob Ellzey
+  </p>
+ </footer>
+</html>
