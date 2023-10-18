@@ -6,7 +6,7 @@
   <meta charset="utf-8"/>
   <meta content="J. Ellzey" name="author"/>
   <title>
-   Fuzz-rite
+   Fuzzrite
   </title>
   <link href="..\favicon_12_10_19.png" id="local" rel="shortcut icon" type="image/x-icon"/>
  </head>
@@ -45,84 +45,87 @@
   </nav>
   <main>
    <h1 class="center-text">
-    Fuzz-rite
+    Germanium Fuzzrite
    </h1>
    <div class="intro">
-    <img src="images\fuzz-rite\img0.jpg" title="intro image"/>
+    <img src="images\fuzz-rite\img1.jpg" title="intro image"/>
     <p id="intro-text">
-     INTRO Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+     In my search for the perfect early 60's fuzz, I naturally spent a lot of time with the Mosrite Fuzzrite circuit. I found a lot of inconsistencies in the available schematics for the germanium version when I was researching which inspired me to try and figure out what was actually going on inside. I figured that by building an accurate germanium Fuzzrite, I could test if the different schematic values affected the sound in any significant way. I found plenty of pictures of early Fuzzrite guts in this
+     <a href="https://fuzzboxes.org/features/fuzzrite">
+      cool and very detailed writeup
+     </a>
+     and traced them out into a new schematic. Luckily there were enough pictures to cross reference them against each other so I can feel confident that the schematic I came up with is correct for at least a portion of existing germanium Fuzzrites. The end result pedal is shown above.
+     <br/>
     </p>
    </div>
    <div class="main-content">
-    <img src="images\fuzz-rite\img0.jpg" title="img0"/>
-    CAPTION Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-    <img src="images\fuzz-rite\img1.jpg" title="img1"/>
-    <img src="images\fuzz-rite\img10.jpg" title="img10"/>
-    <img src="images\fuzz-rite\img11.jpg" title="img11"/>
-    <img src="images\fuzz-rite\img12.jpg" title="img12"/>
-    <img src="images\fuzz-rite\img13.jpg" title="img13"/>
-    <img src="images\fuzz-rite\img14.jpg" title="img14"/>
-    <img src="images\fuzz-rite\img15.jpg" title="img15"/>
-    <img src="images\fuzz-rite\img16.jpg" title="img16"/>
-    <img src="images\fuzz-rite\img17.jpg" title="img17"/>
-    <img src="images\fuzz-rite\img18.jpg" title="img18"/>
-    <img src="images\fuzz-rite\img19.jpg" title="img19"/>
-    <img src="images\fuzz-rite\img2.jpg" title="img2"/>
-    <img src="images\fuzz-rite\img20.jpg" title="img20"/>
-    <img src="images\fuzz-rite\img21.jpg" title="img21"/>
-    <img src="images\fuzz-rite\img22.jpg" title="img22"/>
-    <img src="images\fuzz-rite\img23.jpg" title="img23"/>
-    <img src="images\fuzz-rite\img24.jpg" title="img24"/>
-    <img src="images\fuzz-rite\img25.jpg" title="img25"/>
-    <img src="images\fuzz-rite\img26.jpg" title="img26"/>
-    <img src="images\fuzz-rite\img27.jpg" title="img27"/>
-    <img src="images\fuzz-rite\img28.jpg" title="img28"/>
-    <img src="images\fuzz-rite\img29.jpg" title="img29"/>
-    <img src="images\fuzz-rite\img3.jpg" title="img3"/>
-    <img src="images\fuzz-rite\img30.jpg" title="img30"/>
-    <img src="images\fuzz-rite\img31.jpg" title="img31"/>
-    <img src="images\fuzz-rite\img32.jpg" title="img32"/>
-    <img src="images\fuzz-rite\img33.jpg" title="img33"/>
-    <img src="images\fuzz-rite\img34.jpg" title="img34"/>
-    <img src="images\fuzz-rite\img35.jpg" title="img35"/>
-    <img src="images\fuzz-rite\img36.jpg" title="img36"/>
-    <img src="images\fuzz-rite\img37.jpg" title="img37"/>
-    <img src="images\fuzz-rite\img38.jpg" title="img38"/>
-    <img src="images\fuzz-rite\img39.jpg" title="img39"/>
-    <img src="images\fuzz-rite\img4.jpg" title="img4"/>
-    <img src="images\fuzz-rite\img40.jpg" title="img40"/>
-    <img src="images\fuzz-rite\img41.jpg" title="img41"/>
+    <img src="images\fuzz-rite\schem.svg" style="background-color:white;" title="schematic"/>
+    Here's a list of specific differences between the traced circuit and the old schematics. Some of these features, I would expect to significantly affect the sound and others, not at all.
+    <ul>
+     <li>
+      C1, C3, and C4 are all 100nF but some schematics have them labeled as 47nF
+     </li>
+     <li>
+      The value of C2 is actually 1nF but is incorrectly labeled as 2nF in every schematic I found
+     </li>
+     <li>
+      R6 sets the cutoff frequency of the HPF at the output of Q2 and is missing from some schematics
+     </li>
+     <li>
+      I never came across a schematic that accurately shows the unorthodox switching mechanism for these pedals. Since DPDT switches were most common at the time, Mossrite got creative.
+      <ul>
+       <li>
+        The reason for this madness is to ensure that the battery doesn't drain while the effect is bypassed so the positive terminal of the battery gets disconnected from ground by the footswitch
+       </li>
+       <li>
+        To make it work with a DPDT switch, the ground node for the whole effect circuit is used like a giant jumper to connect the input to the output when the effect is bypassed
+       </li>
+       <li>
+        This is the reason why the circuit ground is kept seperate from the chassis ground everywhere but at one point on the footswitch
+       </li>
+       <li>
+        Keeping circuit ground at the same potential as the signal eliminates the possible load of the volume pot and Q1 on the guitar's pickups when the effect is bypassed.
+       </li>
+      </ul>
+      I decided to include this switching scheme for a more accurate recreation but using a modern standard 3PDT footswitch would definitely be an improvement in functionality.
+     </li>
+     <li>
+      The wacky switching scheme is also the reason for the inclusion of the final most-mistaken component in the schematic. C6 is not a power suppply filter as it may seem at first glance. It was included to reduce the pop from switching DC.
+      <ul>
+       <li>
+        When the effect is on, C6 is shorted out by the footswitch and so it has no voltage across it
+       </li>
+       <li>
+        When the effect is bypassed, the negative side connects to the signal node and the positive side remains connected to +9V
+       </li>
+       <li>
+        C6 charges up through the internal resistance of the battery to +9V and reduces the pop that would accompany a rapid change like this otherwise.
+       </li>
+       <li>
+        Once charged, C6 has the difference between +9V and whatever reference point the guitar signal is riding on
+       </li>
+       <li>
+        When the effect is engaged again, C6 discharges through the switch. Since there is less resistance in the discharge path, the time constant here is much lower and the pop is more audible (putting a small resistor in series with C6 might help reduce this further)
+       </li>
+      </ul>
+     </li>
+    </ul>
     <img src="images\fuzz-rite\img42.jpg" title="img42"/>
-    <img src="images\fuzz-rite\img43.jpg" title="img43"/>
-    <img src="images\fuzz-rite\img44.jpg" title="img44"/>
-    <img src="images\fuzz-rite\img45.jpg" title="img45"/>
-    <img src="images\fuzz-rite\img46.jpg" title="img46"/>
-    <img src="images\fuzz-rite\img47.jpg" title="img47"/>
-    <img src="images\fuzz-rite\img48.jpg" title="img48"/>
-    <img src="images\fuzz-rite\img49.jpg" title="img49"/>
-    <img src="images\fuzz-rite\img5.jpg" title="img5"/>
-    <img src="images\fuzz-rite\img50.jpg" title="img50"/>
-    <img src="images\fuzz-rite\img51.jpg" title="img51"/>
-    <img src="images\fuzz-rite\img52.jpg" title="img52"/>
-    <img src="images\fuzz-rite\img53.jpg" title="img53"/>
-    <img src="images\fuzz-rite\img54.jpg" title="img54"/>
-    <img src="images\fuzz-rite\img55.jpg" title="img55"/>
-    <img src="images\fuzz-rite\img56.jpg" title="img56"/>
-    <img src="images\fuzz-rite\img57.jpg" title="img57"/>
-    <img src="images\fuzz-rite\img58.jpg" title="img58"/>
-    <img src="images\fuzz-rite\img59.jpg" title="img59"/>
-    <img src="images\fuzz-rite\img6.jpg" title="img6"/>
-    <img src="images\fuzz-rite\img60.jpg" title="img60"/>
-    <img src="images\fuzz-rite\img61.jpg" title="img61"/>
-    <img src="images\fuzz-rite\img62.jpg" title="img62"/>
-    <img src="images\fuzz-rite\img63.jpg" title="img63"/>
-    <img src="images\fuzz-rite\img64.jpg" title="img64"/>
-    <img src="images\fuzz-rite\img65.jpg" title="img65"/>
-    <img src="images\fuzz-rite\img66.jpg" title="img66"/>
-    <img src="images\fuzz-rite\img67.jpg" title="img67"/>
-    <img src="images\fuzz-rite\img7.jpg" title="img7"/>
-    <img src="images\fuzz-rite\img8.jpg" title="img8"/>
-    <img src="images\fuzz-rite\img9.jpg" title="img9"/>
+    For aesthetic reasons, I chose to use construction methods and parts characteristic of 1960's electronics. I built the circuit on vulcanized fiberboard that I punched and riveted for connection points like old Fender circuits. The resistors are all 1/2W carbon composition like the original and the caps are timeless poly-film 'greenies'. The two HPF/coupling caps are both ceramic like the original and for C6 I grabbed an old-stock Sprague that still tested good for ESR, capacitance, and leakage. I used cloth covered wire to hook everything up and waxed linen thread to keep the old-school fiberboard battery connector tidy.
+    <img src="images\fuzz-rite\img39.jpg" title="img39"/>
+    Because there is no comprimise on accuracy here, I balled out on 24mm Omeg pots and of course included the ridiculous 350k 'C' taper pot for the Depth control.
+    <img src="images\fuzz-rite\img0.jpg" title="img0"/>
+    Sound samples are in the works...Overall, it sounds great but I plan to do a more in depth analysis on what actually affects the sound.
+    <img src="images\fuzz-rite\img31.jpg" title="img31"/>
+    Here's another Fuzzrite that I built for a customer where I took a different construction approach that resulted in a 'shadowbox' style fuzz.The back is covered in clear acrylic so the circuit is visible.
+    <img src="images\fuzz-rite\img3.jpg" title="img3"/>
+    The circuit was constructed on a particularly fragrant slab of phenolic. I opted for a modern 3PDT switch this time. Both transistors are old stock germanium in funny looking packages.
+    <img src="images\fuzz-rite\img13.jpg" title="img13"/>
+    put a little dude on one of the transistors too
+    <img src="images\fuzz-rite\img17.jpg" title="img17"/>
+    Captain Germanium
+    <img src="images\fuzz-rite\img29.jpg" title="img29"/>
+    Very happy with the look from the front (other than my poor stamping job). The faceplate is CNC-milled acrylic. I like the simplicity of this construction style and I'll definitely use it again in the future.
    </div>
   </main>
   <br/>
