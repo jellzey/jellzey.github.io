@@ -106,6 +106,7 @@ def makeNew(name):
     f.close()
     configureImages(name)
     populate(name+'.html')
+    formatPage(name+'.html')####RECENT ADDITION#####
     print('done')
     
 def populate(name):
